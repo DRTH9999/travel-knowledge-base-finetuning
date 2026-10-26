@@ -1,0 +1,111 @@
+{
+  "status": "PROMPT_V2_ASSISTANT_REVIEW_COMPLETE",
+  "reviewed_at_utc": "2026-10-24T03:37:10.452870+00:00",
+  "assessor": "Codex assistant; same assistant involved in data/rule authoring; not independent human review or a blind assessment",
+  "human_signoff": false,
+  "score_scale": "Five dimensions 0-2, total 0-10; auxiliary rubric score, not accuracy",
+  "archive_sha256": "ffd942b62cc26b2c01609b2f83714b400e6b72b741b9ebb3cf36948d80db80b5",
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "original_control_reproduced": 24,
+  "paired_payloads_verified": 24,
+  "same_answers": 4,
+  "changed_answers": 20,
+  "newly_source_reviewed": 20,
+  "prior_semantic_reviews_reused": 28,
+  "review_count": 48,
+  "variants": {
+    "original_prompt": {
+      "mean_total": 9.75,
+      "mean_scores": {
+        "faithfulness": 1.9166666666666667,
+        "completeness": 2.0,
+        "citation_support": 1.9166666666666667,
+        "answerability": 1.9583333333333333,
+        "constraints_format": 1.9583333333333333
+      },
+      "mean_output_tokens": 57.625,
+      "mean_generation_seconds": 2.6985875,
+      "format_flag_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 0,
+        "irrelevant_reference_ids": 0,
+        "missing_gold_reference_ids": 0,
+        "hit_output_limit": 0
+      }
+    },
+    "revised_prompt": {
+      "mean_total": 9.708333333333334,
+      "mean_scores": {
+        "faithfulness": 1.875,
+        "completeness": 2.0,
+        "citation_support": 1.875,
+        "answerability": 2.0,
+        "constraints_format": 1.9583333333333333
+      },
+      "mean_output_tokens": 50.625,
+      "mean_generation_seconds": 2.4510875,
+      "format_flag_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 0,
+        "irrelevant_reference_ids": 0,
+        "missing_gold_reference_ids": 1,
+        "hit_output_limit": 0
+      }
+    }
+  },
+  "paired_rubric": {
+    "higher_ids": [
+      "travel-eval-validation-005",
+      "travel-eval-validation-020"
+    ],
+    "tied_ids": [
+      "travel-eval-validation-001",
+      "travel-eval-validation-002",
+      "travel-eval-validation-003",
+      "travel-eval-validation-004",
+      "travel-eval-validation-006",
+      "travel-eval-validation-007",
+      "travel-eval-validation-008",
+      "travel-eval-validation-009",
+      "travel-eval-validation-010",
+      "travel-eval-validation-011",
+      "travel-eval-validation-012",
+      "travel-eval-validation-013",
+      "travel-eval-validation-014",
+      "travel-eval-validation-015",
+      "travel-eval-validation-016",
+      "travel-eval-validation-018",
+      "travel-eval-validation-019",
+      "travel-eval-validation-021",
+      "travel-eval-validation-022",
+      "travel-eval-validation-023",
+      "travel-eval-validation-024"
+    ],
+    "lower_ids": [
+      "travel-eval-validation-017"
+    ]
+  },
+  "target_issues": {
+    "005": "subject_mixing_removed",
+    "014": "day_condition_confusion_remains",
+    "020": "unknown_booking_availability_boundary_improved"
+  },
+  "critical_regressions": {
+    "017": "island_overnight_stay_inherits_mainland_neighborhood_convenience_and_wrong_citation"
+  },
+  "automatic_missing_reference_010_is_semantically_benign": true,
+  "recommendation": "Keep original prompt for the existing epoch1 candidate; do not promote prompt_v2 wholesale based on this comparison.",
+  "candidate_model_or_prompt_changed_by_this_review": false,
+  "test_predictions_generated": false,
+  "limitations": [
+    "Validation has repeatedly guided rules and training; it is not independent final evaluation.",
+    "Only 24 synthetic questions from one destination share five short documents.",
+    "Same assistant authored material and reviewed outputs; human signoff remains pending.",
+    "Identical revised answers reuse semantic assessment based on exact question/evidence/history/answer, not on identical prompt tokens; revised prefix tokens differ by design.",
+    "Small rubric-score differences are not statistical evidence or a general benchmark.",
+    "Latency is uncontrolled and answer lengths differ; no speed or cost advantage claim.",
+    "No adapter weights are in this result archive; identity is bound to the previously downloaded weight file and recorded hashes."
+  ]
+}

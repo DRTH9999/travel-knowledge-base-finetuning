@@ -1,0 +1,16 @@
+{
+  "experiment": "revision_v2_epoch1_v1",
+  "dataset_manifest_sha256": "264cfd5df4b000e483894060bab834bcbbec3c273f52f74f24fef1579cc84669",
+  "tokenized_sha256": "da07c0bfbc382a5198ee8672013bcca6c36f84112c1cdf8e4d94305650c5bc08",
+  "project_files_sha256": {
+    "revision_pipeline/__init__.py": "5b4a1c9ee6abec87e3aa432aaa75b227de2d16c7553cc96b64ec80c653bd5293",
+    "revision_pipeline/common.py": "9e1e8ccd293541e1bb6c2991657858e43e5d3b0c5b136c0db383b615ae1b6895",
+    "revision_pipeline/tokenize_revision.py": "fa0dd2cb37fa62f2629e4ecf180684e3815a2c2f3b2d4c288ca47af6740cc62e",
+    "revision_pipeline/legacy_training_core.py": "d789a0f46a99ee81509fb819b5eae5437e9c6b1c7665706faac5d291e6bdebf6",
+    "data/revision_v2/source_manifest.json": "264cfd5df4b000e483894060bab834bcbbec3c273f52f74f24fef1579cc84669",
+    "data/revision_v2/train.tokenized.jsonl": "da07c0bfbc382a5198ee8672013bcca6c36f84112c1cdf8e4d94305650c5bc08",
+    "data/eval_v1/manifest.json": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+    "evaluation/common.py": "68705533edba2d32655a37e64c3d4101c255ad6168b7e7969b207d3046c28b2e",
+    "evaluation/evaluate.py": "05c5917d2bf5c6599dcc4abebc1fdbc802f4680bca44ad79a22f7ae0b9a9ccf3"
+  }
+}

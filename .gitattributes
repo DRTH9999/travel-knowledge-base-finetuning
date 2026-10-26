@@ -1,0 +1,2 @@
+# Preserve exact bytes: frozen datasets and experiment bundles use SHA256 manifests.
+* -text

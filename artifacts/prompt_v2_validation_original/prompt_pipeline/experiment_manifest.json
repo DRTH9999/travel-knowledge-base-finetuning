@@ -1,0 +1,35 @@
+{
+  "experiment": "fixed_epoch1_prompt_v2_validation",
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "adapter_config_sha256": "c74b4e7e700dc2f82ec03299797cc2a39b60d214dbe8dd9d826c06a5a29758a1",
+  "base_model_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "eval_manifest_sha256": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+  "validation_file_sha256": "85435625a22de07d91e72048941a1cd7c226605e42a21f58a649be57e1cb7898",
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "enable_thinking": false,
+    "max_new_tokens": 512,
+    "warmup_new_tokens": 1,
+    "quantization": "NF4_double_quant_BF16_SDPA"
+  },
+  "max_total_tokens": 2048,
+  "baseline_files_sha256": {
+    "report.json": "e5961963735b207183117d79a183dcb4f02ed1c52181f4851698355f5f79be24",
+    "adapter.predictions.jsonl": "584cf1bd828fb7d0dce854fceb025120ec1007e497da869a2cd0dfe8d0e1d050"
+  },
+  "project_files_sha256": {
+    "data/eval_v1/manifest.json": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+    "data/eval_v1/validation.jsonl": "85435625a22de07d91e72048941a1cd7c226605e42a21f58a649be57e1cb7898",
+    "data/eval_v1/prompt_template.txt": "f4f298d92c2d7d7dbb90ba3512cf95ccbd17cd537a5b0a3cd4a14748eb7a1ac0",
+    "evaluation/common.py": "68705533edba2d32655a37e64c3d4101c255ad6168b7e7969b207d3046c28b2e",
+    "evaluation/evaluate.py": "05c5917d2bf5c6599dcc4abebc1fdbc802f4680bca44ad79a22f7ae0b9a9ccf3",
+    "prompt_pipeline/rules_v2.txt": "2f1c65c1818987631d1beb5fdfbcb3edd4f1f0eacd7b3c5b77e25748c59aca90",
+    "prompt_pipeline/prompt_template_v2.txt": "5cad886194dcae67ff15b33fe259daecf488bbac4cca190778daabfeb2815514"
+  },
+  "default_adapter_dir": "outputs/revision_v2_epoch1/adapter",
+  "default_baseline_dir": "eval_outputs/revision_v2_epoch1_512",
+  "prompt_change": "Insert four generic evidence-use rules; retain all original rules and complete question/evidence/history payload.",
+  "selection_status": "candidate_prompt_for_validation_comparison_not_final_selection"
+}

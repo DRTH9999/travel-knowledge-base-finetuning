@@ -1,0 +1,55 @@
+{
+  "status": "LOCAL_EVALUATION_CHECKS_OK",
+  "checked_at_utc": "2026-10-23T13:36:09.361748+00:00",
+  "frozen_data": {
+    "validation_samples": 24,
+    "test_samples": 24,
+    "source_documents_each": 5,
+    "max_validation_prompt_tokens": 562,
+    "source_and_citation_checks": "passed",
+    "rebuilt_frozen_data_unchanged": true
+  },
+  "syntax": {
+    "python_compile": "passed",
+    "bash_n": "passed"
+  },
+  "negative_checks": {
+    "changed_frozen_data_rejected": true,
+    "accidental_test_generation_rejected": true,
+    "unreviewed_scoring_rejected": true
+  },
+  "review_aggregation_test": "Passed using an explicitly synthetic scoring fixture, not model quality scores.",
+  "format_flag_checks": "Invalid, irrelevant and missing reference IDs detected in synthetic fixture.",
+  "runtime_integration": {
+    "model": "randomly_initialized_tiny_Qwen3_not_Qwen3_8B",
+    "validation_questions": 1,
+    "models": 2,
+    "same_token_input_hash": true,
+    "max_new_tokens": 8,
+    "warmup_new_tokens": 1,
+    "status": "EVAL_GENERATION_OK",
+    "comparison_and_pending_reviews_generated": true,
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "5.20.2",
+      "peft": "0.21.2",
+      "bitsandbytes": "0.50.2"
+    }
+  },
+  "code_sha256": {
+    "build_eval.py": "fb1abede768c9712ebac33c63a6e76b6f0ea54399a2ff306e9902e6544694e1d",
+    "common.py": "68705533edba2d32655a37e64c3d4101c255ad6168b7e7969b207d3046c28b2e",
+    "curated_eval.py": "4e0a5f1f1d7220a51451a89e5c0dadae994be6bacc5404a098f012da20d3792d",
+    "evaluate.py": "05c5917d2bf5c6599dcc4abebc1fdbc802f4680bca44ad79a22f7ae0b9a9ccf3",
+    "run_baseline.sh": "42d37dbca05df70fb14ca86f125b8033769887b2ad372cfa264f05f0358bc820",
+    "summarize_reviews.py": "3429227b63db805349e614a83c14aed0e09b01d020c3ecca8103df2c3aeb70d1",
+    "validate_eval.py": "ecc3bd7d94682a32b337feeabc8c2e6e95510a3f2a0c60e58eb4b887ae393cc9"
+  },
+  "full_cloud_qwen3_8b_validation_run": false,
+  "semantic_correctness_auto_scored": false,
+  "limitations": [
+    "Only one held-out destination in each split; shared source facts limit statistical independence.",
+    "Local runtime test used a tiny random model, not the full 8B model.",
+    "Business review of gold answers remains pending."
+  ]
+}

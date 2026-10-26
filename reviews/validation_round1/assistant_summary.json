@@ -1,0 +1,128 @@
+{
+  "status": "ASSISTANT_EVIDENCE_REVIEW_COMPLETE",
+  "reviewed_at_utc": "2026-10-24T00:57:32.736910+00:00",
+  "scope": "24 validation questions, 48 answers, original 256-new-token run only",
+  "assessor": "Codex assistant; not an independent human or blind review",
+  "human_signoff": false,
+  "test_set_evaluated": false,
+  "automatically_graded_semantics": false,
+  "original_archive_sha256": "d809eda41617eb5fd94b45ed9fa0b3c1c32ff0c2f50c1253e7245b904b2e8e5b",
+  "input_identity_verified": true,
+  "score_scale": "5 evidence-review dimensions, each 0-2; total 0-10; not accuracy",
+  "limitations": [
+    "The same assistant authored the gold answers and reviewed outputs; independent human review remains needed.",
+    "Base model reached the generation cap in 11/24 cases; score differences are budget-conditional.",
+    "One held-out destination and shared source facts; no general tourism accuracy claim.",
+    "No external current-tourism fact checking was performed; faithfulness is relative to visible evidence."
+  ],
+  "models": {
+    "base": {
+      "samples": 24,
+      "mean_scores": {
+        "faithfulness": 0.6666666666666666,
+        "completeness": 1.7916666666666667,
+        "citation_support": 0.7916666666666666,
+        "answerability": 2.0,
+        "constraints_format": 0.9583333333333334
+      },
+      "mean_total": 6.208333333333333,
+      "faithfulness_issue_ids": [
+        "travel-eval-validation-001",
+        "travel-eval-validation-002",
+        "travel-eval-validation-003",
+        "travel-eval-validation-004",
+        "travel-eval-validation-005",
+        "travel-eval-validation-006",
+        "travel-eval-validation-007",
+        "travel-eval-validation-008",
+        "travel-eval-validation-009",
+        "travel-eval-validation-010",
+        "travel-eval-validation-011",
+        "travel-eval-validation-012",
+        "travel-eval-validation-013",
+        "travel-eval-validation-014",
+        "travel-eval-validation-015",
+        "travel-eval-validation-016",
+        "travel-eval-validation-017",
+        "travel-eval-validation-018",
+        "travel-eval-validation-019",
+        "travel-eval-validation-023"
+      ],
+      "completeness_issue_ids": [
+        "travel-eval-validation-009",
+        "travel-eval-validation-010",
+        "travel-eval-validation-014"
+      ],
+      "citation_issue_ids": [
+        "travel-eval-validation-001",
+        "travel-eval-validation-002",
+        "travel-eval-validation-003",
+        "travel-eval-validation-004",
+        "travel-eval-validation-005",
+        "travel-eval-validation-006",
+        "travel-eval-validation-007",
+        "travel-eval-validation-009",
+        "travel-eval-validation-010",
+        "travel-eval-validation-011",
+        "travel-eval-validation-012",
+        "travel-eval-validation-013",
+        "travel-eval-validation-014",
+        "travel-eval-validation-015",
+        "travel-eval-validation-016",
+        "travel-eval-validation-017",
+        "travel-eval-validation-019",
+        "travel-eval-validation-022"
+      ],
+      "mean_generated_tokens": 203.45833333333334,
+      "median_generated_tokens": 247.0,
+      "total_generated_tokens": 4883,
+      "total_generation_seconds": 118.7988,
+      "aggregate_tokens_per_generation_second": 41.10310878561063,
+      "throughput_interpretation": "Includes prefill and variable output lengths; not a fixed-length decode benchmark.",
+      "output_limit_count": 11,
+      "image_block_count": 8,
+      "image_url_or_placeholder_count": 7
+    },
+    "adapter": {
+      "samples": 24,
+      "mean_scores": {
+        "faithfulness": 1.8333333333333333,
+        "completeness": 1.75,
+        "citation_support": 1.75,
+        "answerability": 1.875,
+        "constraints_format": 2.0
+      },
+      "mean_total": 9.208333333333334,
+      "faithfulness_issue_ids": [
+        "travel-eval-validation-012",
+        "travel-eval-validation-017",
+        "travel-eval-validation-019"
+      ],
+      "completeness_issue_ids": [
+        "travel-eval-validation-006",
+        "travel-eval-validation-012",
+        "travel-eval-validation-019",
+        "travel-eval-validation-020"
+      ],
+      "citation_issue_ids": [
+        "travel-eval-validation-012",
+        "travel-eval-validation-017",
+        "travel-eval-validation-019"
+      ],
+      "mean_generated_tokens": 39.583333333333336,
+      "median_generated_tokens": 35.0,
+      "total_generated_tokens": 950,
+      "total_generation_seconds": 41.5524,
+      "aggregate_tokens_per_generation_second": 22.8626986648184,
+      "throughput_interpretation": "Includes prefill and variable output lengths; not a fixed-length decode benchmark.",
+      "output_limit_count": 0,
+      "image_block_count": 0,
+      "image_url_or_placeholder_count": 0
+    }
+  },
+  "paired_rubric_total_comparison": {
+    "adapter_higher": 18,
+    "tied": 2,
+    "adapter_lower": 4
+  }
+}

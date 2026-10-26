@@ -1,0 +1,11 @@
+{
+  "status": "DOWNLOADED_CLOUD_REPORT_VERIFIED",
+  "source_archive": "E:\\260515\\知识库项目模型微调\\qwen3_sft_smoke_20261023.tar.gz",
+  "archive_sha256": "dcbfe6ad773428589889a202c55cebe6909be561eb1a05a12642131630de5f46",
+  "adapter_sha256": "c75a2da1a2a35b51b0653a33a83a43584d23f8532a4d3bde069c853c1e3e2336",
+  "adapter_bytes": 87361592,
+  "adapter_hash_matches_report": true,
+  "optimizer_steps": 10,
+  "gradient_checked_steps": 10,
+  "source": "Original downloaded cloud artifacts, not screenshot transcription."
+}

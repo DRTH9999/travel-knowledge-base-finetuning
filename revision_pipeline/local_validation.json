@@ -1,0 +1,171 @@
+{
+  "status": "LOCAL_REVISION_DELIVERY_CHECK_OK",
+  "checked_at_utc": "2026-10-24T02:02:59.748716+00:00",
+  "dataset": {
+    "status": "REVISION_DATA_CHECK_OK",
+    "dataset_version": "revision_v2",
+    "samples": 82,
+    "parent_samples": 50,
+    "supplement_samples": 32,
+    "original_pilot_preserved": true,
+    "used_training_documents": 20,
+    "destination_counts": {
+      "成都": 21,
+      "杭州": 20,
+      "三亚": 21,
+      "云南": 20
+    },
+    "answerability_counts": {
+      "answerable": 54,
+      "unanswerable": 4,
+      "partially_answerable": 24
+    },
+    "supplement_task_counts": {
+      "multi_question": 8,
+      "partially_answerable": 12,
+      "evidence_boundary": 8,
+      "semantic_citation": 4
+    },
+    "reserved_source_in_training": 0,
+    "exact_duplicate_questions": 0,
+    "question_near_duplicate_flags": [],
+    "declared_requirement_mappings_checked": true,
+    "semantic_coverage_auto_verified": false,
+    "user_business_review": "pending",
+    "tokenized": true,
+    "limitations": [
+      "Requirements are author annotations, not proof of semantic coverage.",
+      "Shared evidence/facts are intentional behavior exercises; 82 rows are not 82 independent fact groups.",
+      "Evidence is selected exact source text, not live RAG retrieval; no real-time tourism fact checking."
+    ],
+    "sample_count": 82,
+    "max_tokens": 833,
+    "supervised_tokens": 5605,
+    "tokenized_sha256": "da07c0bfbc382a5198ee8672013bcca6c36f84112c1cdf8e4d94305650c5bc08"
+  },
+  "frozen_evaluation_checks": {
+    "validation": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "partially_answerable": 2,
+        "unanswerable": 3
+      }
+    },
+    "test": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "unanswerable": 3,
+        "partially_answerable": 2
+      }
+    }
+  },
+  "original_first_50_raw_messages_tokens_unchanged": true,
+  "source_inventory_and_exact_excerpts_checked": true,
+  "copied_training_core_identical_to_original": true,
+  "copied_training_core_sha256": "d789a0f46a99ee81509fb819b5eae5437e9c6b1c7665706faac5d291e6bdebf6",
+  "syntax_checks": "Python compile and bash -n passed",
+  "negative_checks": [
+    {
+      "case": "prompt_in_loss",
+      "rejected": true,
+      "message": "Prompt tokens contribute to loss."
+    },
+    {
+      "case": "frozen_source_changed",
+      "rejected": true,
+      "message": "Frozen file changed: sources/交通指南/成都交通指南.md"
+    },
+    {
+      "case": "length_would_truncate",
+      "rejected": true,
+      "message": "Invalid boundary or overlong sample; truncation is forbidden."
+    },
+    {
+      "case": "step_limit",
+      "rejected": true,
+      "message": "100 optimizer steps rejected before loading model."
+    }
+  ],
+  "redundant_support_context_does_not_force_extra_citation": true,
+  "tiny_integration": {
+    "model": "Random initialized two-layer Qwen3; real Qwen3 tokenizer; not Qwen3-8B weights",
+    "status": "REVISION_TRAIN_OK",
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "5.20.2",
+      "trl": "1.16.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "bitsandbytes": "0.50.2"
+    },
+    "training": {
+      "optimizer_steps": 2,
+      "gradient_checked_steps": 2,
+      "loss_history": [
+        {
+          "step": 1,
+          "loss": 11.936197280883789
+        },
+        {
+          "step": 2,
+          "loss": 11.940987586975098
+        }
+      ],
+      "final_training_loss": 11.938592433929443,
+      "probe_parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "probe_max_absolute_update": 0.00020122528076171875,
+      "trainable_parameters": 32768,
+      "collator_checks": {
+        "checked_samples": 82,
+        "original_labels_preserved": true,
+        "padding_labels_masked": true
+      }
+    },
+    "reload": {
+      "parameter_tensors": 28,
+      "saved_and_reloaded_weights_equal": true,
+      "adapter_sha256": "c57ceabc8bfbe94d3ab819102bed2e9c8a410d3f5d72c0a93c1988a256206c35"
+    },
+    "reloaded_nonempty_generation": true,
+    "dataset_manifest_sha256": "264cfd5df4b000e483894060bab834bcbbec3c273f52f74f24fef1579cc84669",
+    "report_sha256": "22b9c684a4779753856087dd540f09cbe1d3f47f65b3c884d99db61e0c6dc256"
+  },
+  "cloud_revision_8b_training_performed": false,
+  "independent_quality_evaluation_performed": false,
+  "limitations": [
+    "Local tiny test verifies the code path only, not 8B quality or resource use.",
+    "Author annotations and automatic checks do not replace business review.",
+    "Revision short experiment does not imply coverage of every row during parameter updates."
+  ],
+  "validation_generation_preflight": {
+    "status": "EVAL_PREFLIGHT_OK",
+    "split": "validation",
+    "samples": 24,
+    "complete_split": true,
+    "max_prompt_tokens": 562,
+    "max_new_tokens": 512,
+    "model_weights_loaded": false,
+    "tokenizer_source": "Existing real Qwen3 tokenizer from tiny integration model"
+  }
+}

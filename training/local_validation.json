@@ -1,0 +1,77 @@
+{
+  "status": "LOCAL_CHECKS_OK",
+  "checked_at_utc": "2026-10-23T13:01:00.271609+00:00",
+  "syntax_checks": {
+    "python_compile": "passed",
+    "bash_n": "passed"
+  },
+  "pilot_preflight": {
+    "status": "TRAINING_DATA_PREFLIGHT_OK",
+    "sample_count": 50,
+    "max_tokens": 833
+  },
+  "negative_checks": {
+    "overlong_data_rejected": true,
+    "excessive_optimizer_steps_rejected": true,
+    "full_sequence_loss_collator_rejected": true
+  },
+  "integration_test": {
+    "status": "TRAIN_SMOKE_OK",
+    "model": "randomly_initialized_tiny_Qwen3_not_Qwen3_8B",
+    "total_base_parameters": 19521920,
+    "layers": 2,
+    "quantization": "bitsandbytes NF4 + double quantization + BF16 compute",
+    "optimizer_steps": 2,
+    "gradient_accumulation": 2,
+    "batch_size": 1,
+    "training": {
+      "optimizer_steps": 2,
+      "gradient_checked_steps": 2,
+      "loss_history": [
+        {
+          "step": 1,
+          "loss": 11.93149185180664
+        },
+        {
+          "step": 2,
+          "loss": 11.928861618041992
+        }
+      ],
+      "final_training_loss": 11.930176734924316,
+      "probe_parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "probe_max_absolute_update": 0.00020122528076171875,
+      "trainable_parameters": 32768,
+      "collator_checks": {
+        "checked_samples": 50,
+        "original_labels_preserved": true,
+        "padding_labels_masked": true
+      }
+    },
+    "reload": {
+      "parameter_tensors": 28,
+      "saved_and_reloaded_weights_equal": true,
+      "adapter_sha256": "7b1ef29ffc96265c2ded5349e14929c20fa531792c23dc30943f8982fbf43622"
+    },
+    "reload_generation_nonempty": true,
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "5.20.2",
+      "trl": "1.16.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "bitsandbytes": "0.50.2"
+    },
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "training_peak_allocated_vram_gib": 0.645
+  },
+  "code_sha256": {
+    "train_sft.py": "d789a0f46a99ee81509fb819b5eae5437e9c6b1c7665706faac5d291e6bdebf6",
+    "run_smoke.sh": "9d00e83d870196c54c92cb2f39e0a5f2e4b44b4a9b3f7afa2184b15d9ba45ea3"
+  },
+  "limitations": [
+    "Full Qwen3-8B training has not run in AutoDL in this chat.",
+    "Local Python 3.13 / Torch 2.11.0+cu128 differs from cloud Python 3.12 / Torch 2.12.1+cu130.",
+    "Tiny random-model outputs are not tourism quality evaluations."
+  ]
+}

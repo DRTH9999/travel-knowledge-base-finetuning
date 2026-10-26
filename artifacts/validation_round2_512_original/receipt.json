@@ -1,0 +1,9 @@
+{
+  "status": "CLOUD_EVAL_ROUND2_ARCHIVE_VERIFIED",
+  "archive_sha256": "c7e7614eea1dcd0a0ea47d0ca496fcd893c3b9e9f9f66daea45eb96b587367a8",
+  "paired_inputs_verified": 24,
+  "same_model_data_adapter_and_versions_as_round1": true,
+  "changed_generation_setting_only": "max_new_tokens: 256 -> 512",
+  "test_predictions_present": false,
+  "adapter_answers_identical_to_round1": true
+}

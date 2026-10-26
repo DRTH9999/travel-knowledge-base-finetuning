@@ -1,0 +1,113 @@
+{
+  "method": "exact_trimmed_body_lines_at_least_30_characters_excluding_list_and_heading_lines",
+  "duplicate_line_groups": 7,
+  "cross_split_duplicate_line_groups": 0,
+  "duplicates": [
+    {
+      "text": "熊猫基地是成都最具有全国辨识度的核心景点之一，也往往是外地游客对成都最明确的单点期待。",
+      "locations": [
+        {
+          "doc_id": "cd_s",
+          "split": "train_pilot",
+          "line": 20
+        },
+        {
+          "doc_id": "cd_s",
+          "split": "train_pilot",
+          "line": 46
+        }
+      ]
+    },
+    {
+      "text": "这里不仅是商圈，也是成都城市旅行的起点，很多人会在这里建立对成都节奏和氛围的第一印象。",
+      "locations": [
+        {
+          "doc_id": "cd_s",
+          "split": "train_pilot",
+          "line": 23
+        },
+        {
+          "doc_id": "cd_s",
+          "split": "train_pilot",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "text": "这两个区域更能代表“老成都”和“慢生活”的城市感受，适合搭配茶馆文化和步行体验。",
+      "locations": [
+        {
+          "doc_id": "cd_s",
+          "split": "train_pilot",
+          "line": 26
+        },
+        {
+          "doc_id": "cd_s",
+          "split": "train_pilot",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "text": "西湖是杭州景点体系的绝对核心，但它不是一个进门出门式景区，而是一整片适合慢慢拆开的城市景观区。",
+      "locations": [
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 20
+        },
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 46
+        }
+      ]
+    },
+    {
+      "text": "灵隐更适合对寺院、人文、山林和传统景区体验有兴趣的人，它和西湖是互补关系。",
+      "locations": [
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 23
+        },
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 49
+        }
+      ]
+    },
+    {
+      "text": "龙井和茶园片区更适合想看杭州另一面的人，也更能体现“西湖之外的杭州”。",
+      "locations": [
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 26
+        },
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "text": "这些地方更接近城市生活和旅游活动界面，适合搭配晚间活动和轻松步行。",
+      "locations": [
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 29
+        },
+        {
+          "doc_id": "hz_s",
+          "split": "train_pilot",
+          "line": 55
+        }
+      ]
+    }
+  ],
+  "limitation": "Not a semantic leakage detector; templates and general travel advice can still overlap."
+}

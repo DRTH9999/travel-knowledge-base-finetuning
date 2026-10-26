@@ -1,0 +1,162 @@
+{
+  "status": "EPOCH1_ASSISTANT_REVIEW_COMPLETE",
+  "reviewed_at_utc": "2026-10-24T03:04:26.390130+00:00",
+  "assessor": "Codex assistant; same assistant involved in data authoring; not independent human review or blind assessment",
+  "human_signoff": false,
+  "score_scale": "Five dimensions each 0-2, total 0-10; auxiliary rubric scores, not accuracy",
+  "archive_sha256": "1a82dd8439f04bbcfc96bcb33f375dc2acb7f20c203bd2067f377417f73cae3f",
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "review_count": 48,
+  "changed_adapter_answers_reviewed": 23,
+  "inherited_after_identity_checks": 25,
+  "base_answers_identical": 24,
+  "adapter_answers_identical": 1,
+  "model_scores": {
+    "base": {
+      "mean_scores": {
+        "faithfulness": 0.625,
+        "completeness": 2.0,
+        "citation_support": 0.7916666666666666,
+        "answerability": 2.0,
+        "constraints_format": 0.625
+      },
+      "mean_total": 6.041666666666667
+    },
+    "adapter": {
+      "mean_scores": {
+        "faithfulness": 1.9166666666666667,
+        "completeness": 2.0,
+        "citation_support": 1.9166666666666667,
+        "answerability": 1.9583333333333333,
+        "constraints_format": 1.9583333333333333
+      },
+      "mean_total": 9.75
+    }
+  },
+  "adapter_observations": {
+    "pilot_50rows_10steps": {
+      "mean_output_tokens": 39.583333333333336,
+      "mean_generation_seconds": 1.9031416666666667,
+      "empty_answers": 0,
+      "output_limit_count": 0,
+      "invalid_reference_count": 0,
+      "missing_gold_reference_count": 5,
+      "image_url_or_placeholder_count": 0
+    },
+    "revision_82rows_10steps": {
+      "mean_output_tokens": 36.875,
+      "mean_generation_seconds": 1.8117041666666667,
+      "empty_answers": 0,
+      "output_limit_count": 0,
+      "invalid_reference_count": 0,
+      "missing_gold_reference_count": 2,
+      "image_url_or_placeholder_count": 0
+    },
+    "revision_82rows_epoch1": {
+      "mean_output_tokens": 57.625,
+      "mean_generation_seconds": 2.65155,
+      "empty_answers": 0,
+      "output_limit_count": 0,
+      "invalid_reference_count": 0,
+      "missing_gold_reference_count": 0,
+      "image_url_or_placeholder_count": 0
+    }
+  },
+  "score_history": {
+    "pilot_50rows_10steps": {
+      "mean_scores": {
+        "faithfulness": 1.8333333333333333,
+        "completeness": 1.75,
+        "citation_support": 1.75,
+        "answerability": 1.875,
+        "constraints_format": 2.0
+      },
+      "mean_total": 9.208333333333334
+    },
+    "revision_82rows_10steps": {
+      "mean_scores": {
+        "faithfulness": 1.8333333333333333,
+        "completeness": 1.7916666666666667,
+        "citation_support": 1.875,
+        "answerability": 1.9166666666666667,
+        "constraints_format": 1.9583333333333333
+      },
+      "mean_total": 9.375
+    },
+    "revision_82rows_epoch1": {
+      "mean_scores": {
+        "faithfulness": 1.9166666666666667,
+        "completeness": 2.0,
+        "citation_support": 1.9166666666666667,
+        "answerability": 1.9583333333333333,
+        "constraints_format": 1.9583333333333333
+      },
+      "mean_total": 9.75
+    }
+  },
+  "paired_rubric_vs_82row_10steps": {
+    "higher_ids": [
+      "travel-eval-validation-002",
+      "travel-eval-validation-010",
+      "travel-eval-validation-012",
+      "travel-eval-validation-016",
+      "travel-eval-validation-017",
+      "travel-eval-validation-019",
+      "travel-eval-validation-020"
+    ],
+    "tied_ids": [
+      "travel-eval-validation-001",
+      "travel-eval-validation-003",
+      "travel-eval-validation-004",
+      "travel-eval-validation-006",
+      "travel-eval-validation-007",
+      "travel-eval-validation-008",
+      "travel-eval-validation-009",
+      "travel-eval-validation-011",
+      "travel-eval-validation-013",
+      "travel-eval-validation-015",
+      "travel-eval-validation-018",
+      "travel-eval-validation-021",
+      "travel-eval-validation-022",
+      "travel-eval-validation-023",
+      "travel-eval-validation-024"
+    ],
+    "lower_ids": [
+      "travel-eval-validation-005",
+      "travel-eval-validation-014"
+    ]
+  },
+  "original_failure_followup": {
+    "006": "benefits_and_costs_preserved",
+    "012": "tradeoff_clarified_no_unverified_storage",
+    "017": "unsupported_facility_claims_removed",
+    "019": "known_checklist_and_unknown_times_prices_both_answered",
+    "020": "room_availability_boundary_improved_but_realtime_price_and_no_data_statement_remain_weak"
+  },
+  "prior_clear_omission_regressions_recovered": [
+    "travel-eval-validation-002",
+    "travel-eval-validation-010"
+  ],
+  "residual_source_alignment_issues": [
+    "travel-eval-validation-005",
+    "travel-eval-validation-014"
+  ],
+  "realtime_boundary_needs_clarification": [
+    "travel-eval-validation-020"
+  ],
+  "citation_locality_editorial_notes": [
+    "travel-eval-validation-006",
+    "travel-eval-validation-015",
+    "travel-eval-validation-019"
+  ],
+  "test_predictions_generated_or_used": false,
+  "limitations": [
+    "One validation destination and 24 synthetic questions sharing five documents; no broad tourism accuracy claim.",
+    "Validation has repeatedly guided iteration; this is regression evidence, not an independent final test.",
+    "Same assistant authored samples and assessed answers; independent human signoff remains pending.",
+    "Training mode and coverage instrumentation changed to epoch mode; same reported settings do not establish bitwise identical training or causal gains.",
+    "Full base weights were not rehashed and full 8B reload was not repeated locally.",
+    "Timing is from single uncontrolled runs with different answer lengths; no throughput or latency conclusion.",
+    "Review checks support in visible source snapshots, not external real-time factual truth."
+  ]
+}

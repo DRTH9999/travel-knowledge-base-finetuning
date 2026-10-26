@@ -1,0 +1,161 @@
+{
+  "status": "FINAL_TEST_ASSISTANT_REVIEW_COMPLETE",
+  "reviewed_at_utc": "2026-10-24T04:02:56.528740+00:00",
+  "assessor": "Codex assistant; involved in data authoring; not independent human review or blind assessment",
+  "human_signoff": false,
+  "score_scale": "Five dimensions each 0-2, total 0-10; auxiliary rubric score, not accuracy or production acceptance",
+  "split": "test",
+  "destination": "张家界",
+  "samples_per_model": 24,
+  "new_answers_reviewed": 48,
+  "prior_reviews_reused": 0,
+  "archive_sha256": "2e746f5bbee486593db5c7e0b1ee55c5e61d9e62c7370807e6f3672eeb6fd7f3",
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "original_business_template_sha256": "f4f298d92c2d7d7dbb90ba3512cf95ccbd17cd537a5b0a3cd4a14748eb7a1ac0",
+  "models": {
+    "base": {
+      "mean_scores": {
+        "faithfulness": 1.0833333333333333,
+        "completeness": 2.0,
+        "citation_support": 1.3333333333333333,
+        "answerability": 2.0,
+        "constraints_format": 0.625
+      },
+      "mean_total": 7.041666666666667,
+      "tasks": {
+        "constrained_planning": {
+          "samples": 3,
+          "mean_total": 8.0
+        },
+        "distractor_filtering": {
+          "samples": 2,
+          "mean_total": 9.0
+        },
+        "history_followup": {
+          "samples": 2,
+          "mean_total": 4.0
+        },
+        "insufficient_evidence": {
+          "samples": 4,
+          "mean_total": 8.75
+        },
+        "multi_evidence": {
+          "samples": 5,
+          "mean_total": 6.4
+        },
+        "single_evidence": {
+          "samples": 8,
+          "mean_total": 6.5
+        }
+      },
+      "mean_output_tokens": 218.375,
+      "mean_generation_seconds": 6.240825,
+      "automatic_format_flag_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 0,
+        "irrelevant_reference_ids": 2,
+        "missing_gold_reference_ids": 4,
+        "hit_output_limit": 1
+      },
+      "image_url_or_placeholder_sample_count": 16,
+      "image_url_or_placeholder_ids": [
+        "travel-eval-test-001",
+        "travel-eval-test-002",
+        "travel-eval-test-003",
+        "travel-eval-test-006",
+        "travel-eval-test-007",
+        "travel-eval-test-008",
+        "travel-eval-test-009",
+        "travel-eval-test-010",
+        "travel-eval-test-011",
+        "travel-eval-test-012",
+        "travel-eval-test-013",
+        "travel-eval-test-014",
+        "travel-eval-test-017",
+        "travel-eval-test-018",
+        "travel-eval-test-020",
+        "travel-eval-test-023"
+      ]
+    },
+    "adapter": {
+      "mean_scores": {
+        "faithfulness": 1.9583333333333333,
+        "completeness": 1.9583333333333333,
+        "citation_support": 1.9583333333333333,
+        "answerability": 1.9583333333333333,
+        "constraints_format": 2.0
+      },
+      "mean_total": 9.833333333333334,
+      "tasks": {
+        "constrained_planning": {
+          "samples": 3,
+          "mean_total": 9.333333333333334
+        },
+        "distractor_filtering": {
+          "samples": 2,
+          "mean_total": 10.0
+        },
+        "history_followup": {
+          "samples": 2,
+          "mean_total": 10.0
+        },
+        "insufficient_evidence": {
+          "samples": 4,
+          "mean_total": 9.5
+        },
+        "multi_evidence": {
+          "samples": 5,
+          "mean_total": 10.0
+        },
+        "single_evidence": {
+          "samples": 8,
+          "mean_total": 10.0
+        }
+      },
+      "mean_output_tokens": 53.416666666666664,
+      "mean_generation_seconds": 2.5758791666666667,
+      "automatic_format_flag_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 0,
+        "irrelevant_reference_ids": 1,
+        "missing_gold_reference_ids": 1,
+        "hit_output_limit": 0
+      },
+      "image_url_or_placeholder_sample_count": 0,
+      "image_url_or_placeholder_ids": []
+    }
+  },
+  "paired_rubric": {
+    "adapter_higher": 18,
+    "tied": 5,
+    "adapter_lower": 1
+  },
+  "confirmed_adapter_review_issues": {
+    "016": "arrival-condition qualifier omitted",
+    "020": "missing realtime hotel inventory/price boundary"
+  },
+  "adapter_editorial_or_capability_caveats": {
+    "019": "general weather vs tomorrow operation wording needs care; automatic label not decisive",
+    "021": "safe conclusion but short conflict explanation; no claim of demonstrated detailed conflict resolution"
+  },
+  "automatic_flag_caveats": {
+    "019": "weather context is insufficient for tomorrow operations, but no future status was asserted",
+    "023_base": "conditional Tianmenshan alternative is actually supported by context 3 despite distractor role",
+    "016_adapter": "missing context 2 is not itself the semantic issue; dropped arrival condition is"
+  },
+  "test_results_used_for_data_prompt_or_checkpoint_selection": false,
+  "candidate_unchanged": true,
+  "production_acceptance_claimed": false,
+  "recommended_next_stage": "Controlled model-serving and actual RAG integration evaluation; confirm implementation stack before making that new choice.",
+  "limitations": [
+    "24 synthetic test questions share five documents and one held-out destination; no broad tourism accuracy claim.",
+    "Same assistant helped author reference material and reviewed outputs; independent business signoff remains pending.",
+    "The pretest candidate was fixed; this review does not tune on test outcomes. Reusing outcomes for future tuning would require a new independent final set.",
+    "Only fixed-evidence answering tested; actual retrieval, streaming, concurrency, deployment and qwen-flash API comparison remain unverified.",
+    "No pre-agreed production score threshold; rubric means cannot be converted into a deployment pass rate.",
+    "Timing is from single uncontrolled runs with different output lengths, not a throughput benchmark.",
+    "Visible source support was assessed, not current external tourism facts."
+  ]
+}

@@ -1,0 +1,981 @@
+{
+  "summary": {
+    "status": "FINAL_TEST_ASSISTANT_REVIEW_COMPLETE",
+    "reviewed_at_utc": "2026-10-24T04:02:56.528740+00:00",
+    "assessor": "Codex assistant; involved in data authoring; not independent human review or blind assessment",
+    "human_signoff": false,
+    "score_scale": "Five dimensions each 0-2, total 0-10; auxiliary rubric score, not accuracy or production acceptance",
+    "split": "test",
+    "destination": "张家界",
+    "samples_per_model": 24,
+    "new_answers_reviewed": 48,
+    "prior_reviews_reused": 0,
+    "archive_sha256": "2e746f5bbee486593db5c7e0b1ee55c5e61d9e62c7370807e6f3672eeb6fd7f3",
+    "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+    "original_business_template_sha256": "f4f298d92c2d7d7dbb90ba3512cf95ccbd17cd537a5b0a3cd4a14748eb7a1ac0",
+    "models": {
+      "base": {
+        "mean_scores": {
+          "faithfulness": 1.0833333333333333,
+          "completeness": 2.0,
+          "citation_support": 1.3333333333333333,
+          "answerability": 2.0,
+          "constraints_format": 0.625
+        },
+        "mean_total": 7.041666666666667,
+        "tasks": {
+          "constrained_planning": {
+            "samples": 3,
+            "mean_total": 8.0
+          },
+          "distractor_filtering": {
+            "samples": 2,
+            "mean_total": 9.0
+          },
+          "history_followup": {
+            "samples": 2,
+            "mean_total": 4.0
+          },
+          "insufficient_evidence": {
+            "samples": 4,
+            "mean_total": 8.75
+          },
+          "multi_evidence": {
+            "samples": 5,
+            "mean_total": 6.4
+          },
+          "single_evidence": {
+            "samples": 8,
+            "mean_total": 6.5
+          }
+        },
+        "mean_output_tokens": 218.375,
+        "mean_generation_seconds": 6.240825,
+        "automatic_format_flag_counts": {
+          "empty_answer": 0,
+          "contains_think_tags": 0,
+          "invalid_reference_ids": 0,
+          "irrelevant_reference_ids": 2,
+          "missing_gold_reference_ids": 4,
+          "hit_output_limit": 1
+        },
+        "image_url_or_placeholder_sample_count": 16,
+        "image_url_or_placeholder_ids": [
+          "travel-eval-test-001",
+          "travel-eval-test-002",
+          "travel-eval-test-003",
+          "travel-eval-test-006",
+          "travel-eval-test-007",
+          "travel-eval-test-008",
+          "travel-eval-test-009",
+          "travel-eval-test-010",
+          "travel-eval-test-011",
+          "travel-eval-test-012",
+          "travel-eval-test-013",
+          "travel-eval-test-014",
+          "travel-eval-test-017",
+          "travel-eval-test-018",
+          "travel-eval-test-020",
+          "travel-eval-test-023"
+        ]
+      },
+      "adapter": {
+        "mean_scores": {
+          "faithfulness": 1.9583333333333333,
+          "completeness": 1.9583333333333333,
+          "citation_support": 1.9583333333333333,
+          "answerability": 1.9583333333333333,
+          "constraints_format": 2.0
+        },
+        "mean_total": 9.833333333333334,
+        "tasks": {
+          "constrained_planning": {
+            "samples": 3,
+            "mean_total": 9.333333333333334
+          },
+          "distractor_filtering": {
+            "samples": 2,
+            "mean_total": 10.0
+          },
+          "history_followup": {
+            "samples": 2,
+            "mean_total": 10.0
+          },
+          "insufficient_evidence": {
+            "samples": 4,
+            "mean_total": 9.5
+          },
+          "multi_evidence": {
+            "samples": 5,
+            "mean_total": 10.0
+          },
+          "single_evidence": {
+            "samples": 8,
+            "mean_total": 10.0
+          }
+        },
+        "mean_output_tokens": 53.416666666666664,
+        "mean_generation_seconds": 2.5758791666666667,
+        "automatic_format_flag_counts": {
+          "empty_answer": 0,
+          "contains_think_tags": 0,
+          "invalid_reference_ids": 0,
+          "irrelevant_reference_ids": 1,
+          "missing_gold_reference_ids": 1,
+          "hit_output_limit": 0
+        },
+        "image_url_or_placeholder_sample_count": 0,
+        "image_url_or_placeholder_ids": []
+      }
+    },
+    "paired_rubric": {
+      "adapter_higher": 18,
+      "tied": 5,
+      "adapter_lower": 1
+    },
+    "confirmed_adapter_review_issues": {
+      "016": "arrival-condition qualifier omitted",
+      "020": "missing realtime hotel inventory/price boundary"
+    },
+    "adapter_editorial_or_capability_caveats": {
+      "019": "general weather vs tomorrow operation wording needs care; automatic label not decisive",
+      "021": "safe conclusion but short conflict explanation; no claim of demonstrated detailed conflict resolution"
+    },
+    "automatic_flag_caveats": {
+      "019": "weather context is insufficient for tomorrow operations, but no future status was asserted",
+      "023_base": "conditional Tianmenshan alternative is actually supported by context 3 despite distractor role",
+      "016_adapter": "missing context 2 is not itself the semantic issue; dropped arrival condition is"
+    },
+    "test_results_used_for_data_prompt_or_checkpoint_selection": false,
+    "candidate_unchanged": true,
+    "production_acceptance_claimed": false,
+    "recommended_next_stage": "Controlled model-serving and actual RAG integration evaluation; confirm implementation stack before making that new choice.",
+    "limitations": [
+      "24 synthetic test questions share five documents and one held-out destination; no broad tourism accuracy claim.",
+      "Same assistant helped author reference material and reviewed outputs; independent business signoff remains pending.",
+      "The pretest candidate was fixed; this review does not tune on test outcomes. Reusing outcomes for future tuning would require a new independent final set.",
+      "Only fixed-evidence answering tested; actual retrieval, streaming, concurrency, deployment and qwen-flash API comparison remain unverified.",
+      "No pre-agreed production score threshold; rubric means cannot be converted into a deployment pass rate.",
+      "Timing is from single uncontrolled runs with different output lengths, not a throughput benchmark.",
+      "Visible source support was assessed, not current external tourism facts."
+    ]
+  },
+  "reviews": [
+    {
+      "id": "travel-eval-test-001",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 5,
+      "rationale": "公路转场的核心结论正确；补入旅游专线/包车车程约1小时等当前片段未提供的信息，并输出不存在于证据中的图片占位符。主结论引用正确，额外时间无依据。",
+      "prediction_sha256": "918c6159b0f60997f5e88560c5414043b332e7f4472b8a26d69a8790724d872c",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-002",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 5,
+      "rationale": "交通类型回答齐全，但新增环保车30分钟至1小时、索道15–20分钟、步行换乘5–10分钟及具体索道等未提供细节，末尾还有图片占位符。",
+      "prediction_sha256": "8ce1f4a06157295df33128cbf907bb662a5e1cea7492b0689d4a4a1f93364f54",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-003",
+      "model": "base",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 7,
+      "rationale": "点对点网约车/出租车的主建议受[1]支持；具体平台、预约和等待等扩写未由片段提供，按额外建议的轻微证据边界问题记录，不等同于已承诺某服务。图片占位符违反无图片不输出的规则。",
+      "prediction_sha256": "533ea04f3593499ccc7a50462fb1fc252b1ecc1537a5ee1f62cd042b81d3f1ed",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-004",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "明确一天不适合两个景区都完整体验，推荐按兴趣选一个；后续兼顾需取舍的条件建议未承诺两者都完整，符合[1]。",
+      "prediction_sha256": "28d08c44473119c8ddfcbf50adb72fe50e0ea767a312b2162900f11013e7db24",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-005",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 0,
+        "answerability": 2,
+        "constraints_format": 1
+      },
+      "total": 5,
+      "rationale": "已覆盖地方菜方向与口味，但三下锅具体食材、山货清淡清新等结论超出片段并挂[1]；生成在512上限处中断。核心问题已回答，截断主要影响收尾，完整性不因缺参考答案逐字复述扣分。",
+      "prediction_sha256": "114be1016f07378c703e11509c0a68b79e1acf8c5dd46ba2eb071e5ffe3d34c8",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-006",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 5,
+      "rationale": "晚到/天门山住市区的主建议正确；补出07:00–17:00开放时间、具体交通类型等未给信息，并生成example.com图片URL。以公告为准的限定不能使无依据时刻变成有来源。",
+      "prediction_sha256": "c456385f2367fb65c4c4fd91fba44987ef47fe6b08bc0bfb75beac1f2fae9387",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-007",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 8,
+      "rationale": "减少清晨通勤与远离市区节点的取舍均有依据；旺季预订和位置优先等是一般建议，未补造分钟数或保证服务。主要缺陷为无来源图片占位符。",
+      "prediction_sha256": "c5447679384763db870fe3653f0f111174938524885d9fda091276d4ce2bd0d3",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-008",
+      "model": "base",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 7,
+      "rationale": "不为网红餐厅折返的核心与[1]一致；额外推测餐厅位于外围、交通不便及营业时间差异，未由当前片段支持，属轻微外扩；输出图片占位符。",
+      "prediction_sha256": "6f6dd55db2b9810386ff223cbb075d2e8ebf6683723f705bcd183e11ea960b12",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-009",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 8,
+      "rationale": "武陵源住宿及就近用餐均正确并分别引用[1][2]；其他餐厅筛选与特殊需求建议没有作具体服务或时间保证。仍输出无来源图片占位符。",
+      "prediction_sha256": "e78bd6598c80dbcf59f4885f112573402d161b5c5defa7f95013f5dfccf30d59",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-010",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 0,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 4,
+      "rationale": "三天框架覆盖，但第二天后仍推荐武陵源以方便次日行程，而第三天是天门山，[2]反而提示天门山住市区；又将索道预约票建议挂[2]，出现条件与引用混用。还有图片占位符。",
+      "prediction_sha256": "a44b988985b1f5bd4fbce445c32b0b3dcc6bb4718cef1b2fa07f03e3d68891f8",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-011",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 8,
+      "rationale": "天门山市区近郊、返程方便与森林公园武陵源方向的区别正确，查询开放/门票是待核对建议，未给出未提供的值。问题为图片占位符。",
+      "prediction_sha256": "8b860c2bed5bbe76db29eeff9b003ed86f9a670b84c1e1306c03352f39d242a3",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-012",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 7,
+      "rationale": "市区正餐与夜间活动均确有可见依据，但把夜生活丰富只挂到[2]，该具体理由实际来自[1]，引用映射部分不完整；另有图片占位符。",
+      "prediction_sha256": "904cf5f7c10205638be15480a24438a8264f4429da4e59599b59311e0d4156ba",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-013",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 5,
+      "rationale": "四天不必不断加景点的结论与[1]一致；自行扩写大观台、玻璃栈道、天门洞、具体餐饮与票务等未给行程，引用无法支撑这些事实。还有图片占位符。",
+      "prediction_sha256": "052dc45c07f5425ef1c2a1c2abdbae864e629da62231648ed41cb6ed15d7ec41",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-014",
+      "model": "base",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 6,
+      "rationale": "近景区住宿和提前接驳主要正确，但把避免清晨/傍晚出行、白天游览减少换乘的建议挂[1]，以及末班核对挂[3]，这些片段未提供相应理由；记轻微外扩和引用问题。另有图片占位符。",
+      "prediction_sha256": "1f832bd7e5ea08b1038907a58169e77e5050f3f0dddc84f93645d8dc43a1d9ab",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-015",
+      "model": "base",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 8,
+      "rationale": "不必频繁换酒店的主要结论正确；补入张家界大剧院等未在片段中的景点和对应住区例子，并挂[2]，属于轻微事实与引用外扩。无输出截断或图片问题。",
+      "prediction_sha256": "51be25120689eb6297e4b8e59f41a011c89918e312a25604b67807e29c72483a",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-016",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "明确不必须赶武陵源，可以按行李与休息需求住市区；[2]支持抵达日/行李的便利方向。未用[1]的自动缺引提示本身不是错误，不要求为了凑齐编号再列全部早晚分支。",
+      "prediction_sha256": "035de01c9bf3f138a4254ac2cb4bf523d44a6269bf169607e20945efe70fe76f",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-017",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 0,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 4,
+      "rationale": "市区方向正确，但声称市区酒店通常有更完善的行李寄存和搬运服务并挂[2]，片段只讲城市配套与交通衔接，未提供酒店服务保证或地区服务比较。另有图片占位符。",
+      "prediction_sha256": "7099a1ad7bfab953e106ea70aded724c0122f4ee52975474abf26e24a3d81f7e",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-018",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 0,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 4,
+      "rationale": "纠正不同片区、不宜一天高强度串联的核心正确；将天门山轻松游、索道玻璃栈道项目、森林公园体力消耗等未给细节挂[2]，新增支持理由超出片段。另有图片占位符。",
+      "prediction_sha256": "1fb4c8aa2a98dfe2e5dbaa25cc0f5a640e8eb33ebccc7c7d1f457b358f4559ff",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-019",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "拒绝提供资料没有的明日开放时间和运营信息，没有生成未来时刻。[1]只含一般天气提醒，不足以预测明日状态，但当前回答并未拿它断言明天开放或关闭；不把自动distractor提示直接判成已确认错引。",
+      "prediction_sha256": "206fa22d41ee869e3ee3f55328ad859a750994787afc16c68577e1c8b9e38995",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-020",
+      "model": "base",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 5,
+      "rationale": "能说明缺具体酒店与价格并给出优缺点，但以资料未列酒店推导“住宿选择有限”，还泛称部分度假酒店/民宿提供家庭房，当前证据未给这些事实。拒答主要未知信息的方向正确，仍有无依据扩写及图片占位符。",
+      "prediction_sha256": "45a61ac6a9c00fbea2356b6c8f6bfdb122a06cd9c886bfe62be5ac27c4191a7c",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-021",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "分别列出两份不同建议，明确不能据此保证两景区完整体验；取舍是条件建议，未伪造确定承诺，引用对应。",
+      "prediction_sha256": "c7178a0648e2089afaf6bf2e884e84c5e336c60e9470603fe26bc52624b225a1",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-022",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "没有资料时不编造包间和最低消费，建议向商家核对，边界正确。未追问餐厅名可优化，但不是核心漏答。",
+      "prediction_sha256": "1950cbc097d539f5147616d67ab2530265b7b389843473041dd387caf40d46f5",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-023",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 0
+      },
+      "total": 8,
+      "rationale": "主建议武陵源由[2]支持；附加“若以天门山为主可看市区节点”确由[3]支持，虽属本题旁支，也不能只因其被标distractor就判为语义错引。问题为图片占位符。",
+      "prediction_sha256": "1eb511812e5188f737c29497cee08e76a69cddebffea76b74aaccc43d7bfb5c8",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-024",
+      "model": "base",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "没有提供列车时刻或余票，拒答边界正确；景区公告措辞不贴合铁路，但来自现有通用模板，按之前口径不单独扣分。",
+      "prediction_sha256": "9432f15a0de371dd70271e4a83212f52b231d58fd577e02ed9af6189b063acf8",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-001",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "机场定位与继续公路转场均由[1]支持，没有补出车程或班次。",
+      "prediction_sha256": "16d7ffc9ab02334e995129881c19e243302198e43509e6488fe1814c28acc91f",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-002",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "不能全按步行、环保车/索道/换乘应计入行程均来自[1]，未编造交通时间。",
+      "prediction_sha256": "43bd08c165e391def72b111ced1ac7337c388d6cd111a0433163edb99c475e9a",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-003",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "点对点打车回应行李及不想多段公交，适用节点与[1]一致，没有服务保证或价格外推。",
+      "prediction_sha256": "c788ee4a250f8b1ac980f6b4f9b0816e1f2fcff380bb475b21e6c376f8dc002a",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-004",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "明确一天不能要求两个核心景区都完整，回答直接、条件与[1]一致。",
+      "prediction_sha256": "4678cb6ae7947a1699106cf9df7463f0e46cdba22ab963174059f4886abdd20d",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-005",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "四类地方菜方向、重口/下饭/烟熏与整体酸辣咸香均来自[1]，没有复现基线的配料臆测或山货清淡外推。第二段可补就近引用。",
+      "prediction_sha256": "a665d93417869d139c5452291f61fc8330e4f20674f32cb88024ae2504c1794d",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-006",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "完整说明市区适合晚到、天门山及交通衔接，内容均在[1]；没有给具体营业时间或酒店服务。",
+      "prediction_sha256": "666fd8e6cbff7bfa68438db4836344d78615a43babfd34fb1907163d7d45eded",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-007",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "减少清晨通勤的优势与离市区节点更远的代价都覆盖，同一[1]支持，第二段可重复标注以更清楚。",
+      "prediction_sha256": "8ceeb20d15f60ee07f827881731f172e37526731314803f0283bb919b9e92b15",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-008",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "明确不为网红店折返，按行程就近用餐，受[1]支持。",
+      "prediction_sha256": "4d6afe7d3d4ef5e81f087bb40998ae45635c04d361db4fa2baa403485cc22263",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-009",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "住宿和午饭两项均覆盖，分别由[1][2]支持，没有新增交通或餐厅事实。",
+      "prediction_sha256": "3f0f1a434b4b2b4dd62706980cbf73dd3daf94693d550bbedbb28dcc5c8e79f9",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-010",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "抵达住宿、森林公园完整时段、天门山返程以及两类住区联动均正确复述，三天与相应条件没有混用。",
+      "prediction_sha256": "8ef80a60d664be289749a68b031e04cd675c393abf3c5d9a8fe15b0e60e9dd51",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-011",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "直接选择天门山并解释市区交通衔接，森林公园在武陵源方向及不同住区出发节奏也有[2]支持；未重复完整一天的背景不算漏答。",
+      "prediction_sha256": "39123aa3dbbe599fd92449731ff09dca1c2b763caec82f8e4169c7f08a681c96",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-012",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "市区夜间餐饮与完整地方菜的依据来自[1][2]，合并表述但两个引用共同支持主要理由。",
+      "prediction_sha256": "27fff1623e90dacc8c8d20806e416212ec7c929f9505cc06335237e814bd9ed2",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-013",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "按四天放缓、交通休息留余量和不天天重行程回答，来源分别对应；没有强行增加景点。",
+      "prediction_sha256": "12fd3a349c0908dd59ded144bdb956293aa770b1a33fc6ceb3a365bffee4a238",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-014",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "住宿贴近主景区、武陵源减少清晨通勤、老人孩子放慢交通并提前接驳均覆盖，[1][3][2]对应。",
+      "prediction_sha256": "6c3e03948f8ea0a2ba83bc3bac56ccdea695b99812f8e8de0b3b0895eaa4472d",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-015",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "不必频繁换酒店，主住区按核心景区选择，另区景点放抵达/返程等内容均在[1][2]，未添新景点。",
+      "prediction_sha256": "d2e18020e22d3b650de404e63a3e3139c2eddc35546998f7b876046a7bed89f8",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-016",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 8,
+      "rationale": "主建议可住市区符合题意；但转述[1]时把“抵达较早且次日直奔森林公园”简化成只要次日直奔就可直接去武陵源，省略了较早这一前提，扩大适用范围。第二段又将“下午才到”直接归为较晚，宜更明确按实际抵达时间判断。未引[2]本身不构成错误。",
+      "prediction_sha256": "620b5967231ab8c326f70010643bc8435056b718b25a79f8441c1834c8f0dedf",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-017",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "结合历史的天门山、返程及行李需求推荐市区，两段分别有[2][1]，没有补造寄存搬运服务。",
+      "prediction_sha256": "30c4696f3850d1735257b23ed3fa5d9f3caf5dba474ab7e3ada3c4f0fa13da7a",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-018",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "用当前证据纠正历史同一区域的错误，明确两片区与不宜同一天高强度串联，[1][2]支持；可更直接承认此前说错，但核心已经纠正。",
+      "prediction_sha256": "908c19bf8c2fa5d619dd8d5279470f4a56956bf7df64af42266e36fe73645637",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-019",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "不编造明日开放与首班时刻，未知边界正确。天气句的范围可更清楚：原文只给一般天气对索道/观景体验的提醒，不等于明日运营公告；当前回答没有把一般提醒当成明天开放/关闭的事实。“体验”和“运营”应区分，先记措辞歧义，不将自动无关引用标记当作确定事实错误。",
+      "prediction_sha256": "158fd5b8efc786d2622b6529a72331af7883c56a8241eeb1f5229d6800a22f07",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-020",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 1,
+        "citation_support": 2,
+        "answerability": 1,
+        "constraints_format": 2
+      },
+      "total": 8,
+      "rationale": "优缺点有依据，但没有回答哪家酒店、家庭房与价格，也没有明确说资料缺少今晚库存/实时房价、无法确认这些内容。属于部分可答时遗漏未知边界，不能因未编造数值就认定需求已全部覆盖。",
+      "prediction_sha256": "6fab36c758e891a460c807a9efce7e04dc3b004aa1995813dd9f90ae03093360",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-021",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "回答不能保证两个景区完整、需按具体行程取舍，结论与两段可见建议一致。解释非常简略，没有分别呈现两份资料如何不同；题目问能否确定，未强制要求逐段比较，因此不按未逐字复现参考答案扣分，也不据此宣称冲突解释能力充分。",
+      "prediction_sha256": "465100bd6bafe84138d0f20a9dbeed935d0cd114cab8860b7bdff9d930816caf",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-022",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "明确无法确认今日包间与最低消费并建议联系餐厅，没有编造事实；可补问餐厅名。",
+      "prediction_sha256": "563da4bf4660a4ff9f2c6b134ba4c31c349fbcbc124951d686d9592fb4980905",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-023",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "优先武陵源、减少通勤与适用条件均来自[2]，没有把小吃或其他片区材料错误作为当前住宿理由。",
+      "prediction_sha256": "6ccec7592ec7ebfb2d82f655d31a5bd8c02ffe347bd91ec3aad0981ffafd1276",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    },
+    {
+      "id": "travel-eval-test-024",
+      "model": "adapter",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "明确住宿资料没有高铁时刻/余票，未给出无依据数字；铁路核对渠道可更具体，但用户问能否据此给出，拒答已明确。",
+      "prediction_sha256": "df11f5b9547b90188bd0b97f174bbfd4fb316c19eaa6b7612e852dc6dbfbccf5",
+      "status": "assistant_reviewed_user_pending",
+      "human_signoff": false,
+      "review_method": "new_source_review_of_final_test_answer"
+    }
+  ]
+}

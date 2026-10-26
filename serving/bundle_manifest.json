@@ -1,0 +1,27 @@
+{
+  "package": "qwen3_model_service_a_v1",
+  "created_at_utc": "2026-10-24T06:19:43.613787+00:00",
+  "files_sha256": {
+    "serving/__init__.py": "8e21c2c712686d7b448e6bec6891dc7520b4a8290a16f15ab8f29b0d5a97f055",
+    "serving/app.py": "42d317cb4bc21dcbfa1d1c82c440d5535fb2aa7389df5cafeacc122097db00a9",
+    "serving/candidate.json": "b0d6be30ead85e3a64817e6d19bfc4ceda22256de47c43ae5400eba0450c2589",
+    "serving/check_cloud.sh": "6f76d52aa34d60f2edd59d4f00f6cc427cd30cd9f2b158322b5f858dcd9604fc",
+    "serving/client.py": "84b3e53fd39863c2f6d019818e1e6b7bffc81f262ddafd0f1868d12e62e4f0cc",
+    "serving/collect_results.py": "21c3dbecc097bcf972ede1b17e411e896007503938b7c5e64969bd5aa8cb153a",
+    "serving/common.py": "3a487cbae8fdaaf60d82bba10cc6072994ff5dd4adbc7b36e24756d8cd82c408",
+    "serving/compatibility.jsonl": "65371667e91ac853d70897205875b408bbce6dc307f6baf0a371e52fc774be52",
+    "serving/engine.py": "104d1ff6eefe4b99eed67cca2ad54a84182e684d9eb4801adfa045c4981fc32c",
+    "serving/local_validation.json": "b05ba23924ba0435b2b0abf44411e99bb0173a74c2ba641d48d3a16d737136c5",
+    "serving/package.py": "dccf1f53a657454227d4edb0fe57f8ef0f25004378ed83c87c8fc49008c227f2",
+    "serving/preflight.py": "5c7ebfba8eb05c65324a66ef59e8ab2f0ddba8cd942d39186ed1835d23d0f01a",
+    "serving/README.md": "0d9c49e9d7724dd24b21a4d10d0a6cc8c4b84b52e6546df4b1ff6d5edf72d2a6",
+    "serving/replay.py": "1c75068309af07e2e088fe94bfa540903bef9e6b8fe17f4323812e3eea0b2207",
+    "serving/requirements.txt": "f8cfac5c9ca87430e106b3d1d0142644aeb5cde48db7eb911221173152c6504f",
+    "serving/run_cloud.sh": "f2498538580c2cc7cda52a4046354cf7411260db4b24b04ae99ea8cf674cbf96",
+    "serving/runtime.py": "972e208241ce8c9087930005171e59e07ab55d156ecc7d2a49e5dcc90b29d9e6",
+    "serving/runtime_constraints.txt": "41945671a41dc065ba5e840a17df1e5e7cc3b007871b8c1aee6e912e277109db",
+    "serving/setup_cloud.sh": "d5d2687b2c7cf76c21d9df2ab85ce179bc6ba45384a4760752f2e390f1e42a1b",
+    "serving/smoke.py": "267920d6309300a5dfe1796bce2e4f0a0296f96f2a3a5882c6cb1d93259ffbfa",
+    "serving/verify_package.py": "541b07addc7e8e5f32e92b0452c231f344cf4be32eb068a093e7659efc22e302"
+  }
+}

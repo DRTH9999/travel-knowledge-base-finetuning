@@ -1,0 +1,683 @@
+{
+  "rubric": {
+    "faithfulness": "事实忠实：0=有关键无依据或错误事实；1=轻微问题；2=有依据且无明显事实错误",
+    "completeness": "完整性：0=遗漏核心需求；1=部分覆盖；2=覆盖主要问题与条件",
+    "citation_support": "引用支持：0=关键引用错误或缺失；1=部分支持；2=关键结论均有对应依据",
+    "answerability": "回答边界：0=编造缺失信息或明显误拒答；1=边界表达不完整；2=可答与缺失部分处理恰当",
+    "constraints_format": "约束与表达：0=违背关键约束或难以使用；1=轻微问题；2=符合用户约束且清晰"
+  },
+  "reviews": [
+    {
+      "id": "travel-eval-validation-001",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-001",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-002",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-002",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-003",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-003",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-004",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-004",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-005",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-005",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-006",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-006",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-007",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-007",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-008",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-008",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-009",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-009",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-010",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-010",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-011",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-011",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-012",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-012",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-013",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-013",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-014",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-014",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-015",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-015",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-016",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-016",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-017",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-017",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-018",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-018",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-019",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-019",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-020",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-020",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-021",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-021",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-022",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-022",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-023",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-023",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-024",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    },
+    {
+      "id": "travel-eval-validation-024",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": null,
+        "completeness": null,
+        "citation_support": null,
+        "answerability": null,
+        "constraints_format": null
+      },
+      "reviewer": "",
+      "notes": "",
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "status": "DATA_CHECK_OK",
+  "sample_count": 50,
+  "task_counts": {
+    "single_evidence": 15,
+    "multi_evidence": 12,
+    "constrained_planning": 8,
+    "history_followup": 5,
+    "insufficient_evidence": 8,
+    "distractor_filtering": 2
+  },
+  "destination_counts": {
+    "成都": 13,
+    "杭州": 12,
+    "三亚": 13,
+    "云南": 12
+  },
+  "answerability_counts": {
+    "answerable": 42,
+    "unanswerable": 4,
+    "partially_answerable": 4
+  },
+  "source_documents_total": 30,
+  "used_training_documents": 20,
+  "context_occurrences": 92,
+  "unique_source_excerpts": 72,
+  "reserved_source_in_training_count": 0,
+  "exact_duplicate_questions": 0,
+  "exact_duplicate_answers": 0,
+  "question_near_duplicates": [],
+  "shared_evidence_pairs": [
+    {
+      "ids": [
+        "travel-sft-pilot-009",
+        "travel-sft-pilot-045"
+      ],
+      "shared_chunk_ids": [
+        "sy_t:L59-L60:d14b8696df91"
+      ]
+    },
+    {
+      "ids": [
+        "travel-sft-pilot-013",
+        "travel-sft-pilot-047"
+      ],
+      "shared_chunk_ids": [
+        "yn_t:L33-L34:20e0fd0dbc1c"
+      ]
+    },
+    {
+      "ids": [
+        "travel-sft-pilot-027",
+        "travel-sft-pilot-050"
+      ],
+      "shared_chunk_ids": [
+        "yn_h:L33-L36:ea5d6c783813",
+        "yn_t:L53-L54:0b50f378cc76"
+      ]
+    }
+  ],
+  "unmatched_arabic_number_flags": [],
+  "max_business_prompt_characters": 1113,
+  "model_weights_loaded": false,
+  "training_started": false,
+  "tokenizer_status": "local_render_and_label_checks_passed_cloud_recheck_pending",
+  "semantic_entailment_auto_verified": false,
+  "user_review_status": "pending",
+  "limitations": [
+    "Source evidence was selected by the assistant, not by live RAG retrieval.",
+    "All questions, answers and histories are synthetic; 50 rows are not 50 independent fact groups.",
+    "No source dates or authority verification; no live tourism information was checked.",
+    "Exact-line duplicate checks cannot rule out semantic overlap across reserved destinations.",
+    "No held-out questions have been generated; no baseline or fine-tuned model evaluation has run."
+  ],
+  "max_total_tokens": 833,
+  "suggested_pilot_max_length": 2048
+}

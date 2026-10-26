@@ -1,0 +1,98 @@
+{
+  "status": "EVAL_GENERATION_OK",
+  "created_at_utc": "2026-10-24T02:15:20.351487+00:00",
+  "split": "validation",
+  "samples": 24,
+  "complete_split": true,
+  "model_dir": "/root/autodl-tmp/models/Qwen3-8B",
+  "adapter_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/outputs/revision_v2_10steps/adapter",
+  "model_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "adapter_sha256": "0fa58b34c6a9a77a2556f1eb0be5f7b961fcee0516b95a060487d260aab27d31",
+  "eval_manifest_sha256": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+  "eval_file_sha256": "85435625a22de07d91e72048941a1cd7c226605e42a21f58a649be57e1cb7898",
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "versions": {
+    "torch": "2.12.1+cu130",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2"
+  },
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "enable_thinking": false,
+    "max_new_tokens": 512,
+    "warmup_new_tokens": 1,
+    "quantization": "NF4_double_quant_BF16_SDPA"
+  },
+  "manual_review_status": "pending",
+  "semantic_correctness_auto_scored": false,
+  "data_checks": {
+    "validation": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "partially_answerable": 2,
+        "unanswerable": 3
+      }
+    },
+    "test": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "unanswerable": 3,
+        "partially_answerable": 2
+      }
+    }
+  },
+  "models": {
+    "base": {
+      "samples": 24,
+      "automatic_format_flag_sample_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 2,
+        "irrelevant_reference_ids": 0,
+        "missing_gold_reference_ids": 3,
+        "hit_output_limit": 1
+      },
+      "warmup_seconds": 0.4474,
+      "mean_generation_seconds": 6.6216875,
+      "peak_allocated_vram_gib": 5.899
+    },
+    "adapter": {
+      "samples": 24,
+      "automatic_format_flag_sample_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 0,
+        "irrelevant_reference_ids": 0,
+        "missing_gold_reference_ids": 2,
+        "hit_output_limit": 0
+      },
+      "warmup_seconds": 0.0882,
+      "mean_generation_seconds": 1.8117041666666667,
+      "peak_allocated_vram_gib": 5.98
+    }
+  },
+  "output_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/eval_outputs/revision_v2_512",
+  "interpretation": "Generation completed; format flags are review hints, not accuracy or quality scores."
+}

@@ -1,0 +1,49 @@
+# Local environments and caches
+.cache/
+.pytest_cache/
+.venv/
+.serving-venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+node_modules/
+
+# Machine-specific settings and credentials
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+!.env.template
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Model weights and duplicated tokenizer snapshots
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+**/adapter/tokenizer.json
+**/adapter/vocab.json
+**/adapter/merges.txt
+
+# Local transfer packages and extracted service bundles
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+/serving_runtime/
+
+# Editor and OS temporary files
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db

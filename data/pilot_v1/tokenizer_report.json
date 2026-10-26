@@ -1,0 +1,380 @@
+{
+  "status": "TOKENIZER_EXPORT_OK",
+  "samples": 50,
+  "local_files_only": true,
+  "model_weights_loaded": false,
+  "transformers_version": "4.57.6",
+  "tokenizers_version": "0.22.2",
+  "eos_token": "<|im_end|>",
+  "eos_token_id": 151645,
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "tokenizer_assets_sha256": {
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "config.json": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+  },
+  "mode": "enable_thinking=False",
+  "prefix_contains_empty_think_prefill": true,
+  "supervised_region": "direct_answer_and_one_terminal_eos_only",
+  "truncated_samples": 0,
+  "all_prefix_labels_masked": true,
+  "total_supervised_tokens": 3395,
+  "min_total_tokens": 422,
+  "max_total_tokens": 833,
+  "p95_total_tokens": 756,
+  "max_prompt_tokens": 702,
+  "max_completion_tokens": 131,
+  "suggested_pilot_max_length": 2048,
+  "sample_lengths": [
+    {
+      "id": "travel-sft-pilot-001",
+      "prompt_tokens": 452,
+      "completion_tokens": 49,
+      "total_tokens": 501,
+      "target_character_count": 76
+    },
+    {
+      "id": "travel-sft-pilot-002",
+      "prompt_tokens": 607,
+      "completion_tokens": 66,
+      "total_tokens": 673,
+      "target_character_count": 94
+    },
+    {
+      "id": "travel-sft-pilot-003",
+      "prompt_tokens": 530,
+      "completion_tokens": 75,
+      "total_tokens": 605,
+      "target_character_count": 95
+    },
+    {
+      "id": "travel-sft-pilot-004",
+      "prompt_tokens": 392,
+      "completion_tokens": 37,
+      "total_tokens": 429,
+      "target_character_count": 56
+    },
+    {
+      "id": "travel-sft-pilot-005",
+      "prompt_tokens": 398,
+      "completion_tokens": 44,
+      "total_tokens": 442,
+      "target_character_count": 67
+    },
+    {
+      "id": "travel-sft-pilot-006",
+      "prompt_tokens": 426,
+      "completion_tokens": 38,
+      "total_tokens": 464,
+      "target_character_count": 56
+    },
+    {
+      "id": "travel-sft-pilot-007",
+      "prompt_tokens": 397,
+      "completion_tokens": 41,
+      "total_tokens": 438,
+      "target_character_count": 61
+    },
+    {
+      "id": "travel-sft-pilot-008",
+      "prompt_tokens": 496,
+      "completion_tokens": 60,
+      "total_tokens": 556,
+      "target_character_count": 74
+    },
+    {
+      "id": "travel-sft-pilot-009",
+      "prompt_tokens": 412,
+      "completion_tokens": 62,
+      "total_tokens": 474,
+      "target_character_count": 92
+    },
+    {
+      "id": "travel-sft-pilot-010",
+      "prompt_tokens": 403,
+      "completion_tokens": 39,
+      "total_tokens": 442,
+      "target_character_count": 53
+    },
+    {
+      "id": "travel-sft-pilot-011",
+      "prompt_tokens": 433,
+      "completion_tokens": 44,
+      "total_tokens": 477,
+      "target_character_count": 67
+    },
+    {
+      "id": "travel-sft-pilot-012",
+      "prompt_tokens": 403,
+      "completion_tokens": 42,
+      "total_tokens": 445,
+      "target_character_count": 55
+    },
+    {
+      "id": "travel-sft-pilot-013",
+      "prompt_tokens": 403,
+      "completion_tokens": 49,
+      "total_tokens": 452,
+      "target_character_count": 73
+    },
+    {
+      "id": "travel-sft-pilot-014",
+      "prompt_tokens": 423,
+      "completion_tokens": 44,
+      "total_tokens": 467,
+      "target_character_count": 68
+    },
+    {
+      "id": "travel-sft-pilot-015",
+      "prompt_tokens": 473,
+      "completion_tokens": 43,
+      "total_tokens": 516,
+      "target_character_count": 57
+    },
+    {
+      "id": "travel-sft-pilot-016",
+      "prompt_tokens": 451,
+      "completion_tokens": 50,
+      "total_tokens": 501,
+      "target_character_count": 77
+    },
+    {
+      "id": "travel-sft-pilot-017",
+      "prompt_tokens": 639,
+      "completion_tokens": 118,
+      "total_tokens": 757,
+      "target_character_count": 164
+    },
+    {
+      "id": "travel-sft-pilot-018",
+      "prompt_tokens": 451,
+      "completion_tokens": 63,
+      "total_tokens": 514,
+      "target_character_count": 96
+    },
+    {
+      "id": "travel-sft-pilot-019",
+      "prompt_tokens": 566,
+      "completion_tokens": 82,
+      "total_tokens": 648,
+      "target_character_count": 119
+    },
+    {
+      "id": "travel-sft-pilot-020",
+      "prompt_tokens": 483,
+      "completion_tokens": 80,
+      "total_tokens": 563,
+      "target_character_count": 108
+    },
+    {
+      "id": "travel-sft-pilot-021",
+      "prompt_tokens": 433,
+      "completion_tokens": 59,
+      "total_tokens": 492,
+      "target_character_count": 84
+    },
+    {
+      "id": "travel-sft-pilot-022",
+      "prompt_tokens": 479,
+      "completion_tokens": 82,
+      "total_tokens": 561,
+      "target_character_count": 130
+    },
+    {
+      "id": "travel-sft-pilot-023",
+      "prompt_tokens": 583,
+      "completion_tokens": 94,
+      "total_tokens": 677,
+      "target_character_count": 137
+    },
+    {
+      "id": "travel-sft-pilot-024",
+      "prompt_tokens": 463,
+      "completion_tokens": 91,
+      "total_tokens": 554,
+      "target_character_count": 136
+    },
+    {
+      "id": "travel-sft-pilot-025",
+      "prompt_tokens": 702,
+      "completion_tokens": 131,
+      "total_tokens": 833,
+      "target_character_count": 193
+    },
+    {
+      "id": "travel-sft-pilot-026",
+      "prompt_tokens": 527,
+      "completion_tokens": 77,
+      "total_tokens": 604,
+      "target_character_count": 113
+    },
+    {
+      "id": "travel-sft-pilot-027",
+      "prompt_tokens": 546,
+      "completion_tokens": 94,
+      "total_tokens": 640,
+      "target_character_count": 131
+    },
+    {
+      "id": "travel-sft-pilot-028",
+      "prompt_tokens": 440,
+      "completion_tokens": 75,
+      "total_tokens": 515,
+      "target_character_count": 117
+    },
+    {
+      "id": "travel-sft-pilot-029",
+      "prompt_tokens": 507,
+      "completion_tokens": 81,
+      "total_tokens": 588,
+      "target_character_count": 123
+    },
+    {
+      "id": "travel-sft-pilot-030",
+      "prompt_tokens": 516,
+      "completion_tokens": 90,
+      "total_tokens": 606,
+      "target_character_count": 132
+    },
+    {
+      "id": "travel-sft-pilot-031",
+      "prompt_tokens": 484,
+      "completion_tokens": 79,
+      "total_tokens": 563,
+      "target_character_count": 124
+    },
+    {
+      "id": "travel-sft-pilot-032",
+      "prompt_tokens": 582,
+      "completion_tokens": 90,
+      "total_tokens": 672,
+      "target_character_count": 135
+    },
+    {
+      "id": "travel-sft-pilot-033",
+      "prompt_tokens": 654,
+      "completion_tokens": 102,
+      "total_tokens": 756,
+      "target_character_count": 151
+    },
+    {
+      "id": "travel-sft-pilot-034",
+      "prompt_tokens": 479,
+      "completion_tokens": 102,
+      "total_tokens": 581,
+      "target_character_count": 146
+    },
+    {
+      "id": "travel-sft-pilot-035",
+      "prompt_tokens": 493,
+      "completion_tokens": 89,
+      "total_tokens": 582,
+      "target_character_count": 133
+    },
+    {
+      "id": "travel-sft-pilot-036",
+      "prompt_tokens": 472,
+      "completion_tokens": 43,
+      "total_tokens": 515,
+      "target_character_count": 58
+    },
+    {
+      "id": "travel-sft-pilot-037",
+      "prompt_tokens": 478,
+      "completion_tokens": 62,
+      "total_tokens": 540,
+      "target_character_count": 82
+    },
+    {
+      "id": "travel-sft-pilot-038",
+      "prompt_tokens": 572,
+      "completion_tokens": 100,
+      "total_tokens": 672,
+      "target_character_count": 153
+    },
+    {
+      "id": "travel-sft-pilot-039",
+      "prompt_tokens": 561,
+      "completion_tokens": 60,
+      "total_tokens": 621,
+      "target_character_count": 88
+    },
+    {
+      "id": "travel-sft-pilot-040",
+      "prompt_tokens": 509,
+      "completion_tokens": 74,
+      "total_tokens": 583,
+      "target_character_count": 106
+    },
+    {
+      "id": "travel-sft-pilot-041",
+      "prompt_tokens": 386,
+      "completion_tokens": 36,
+      "total_tokens": 422,
+      "target_character_count": 56
+    },
+    {
+      "id": "travel-sft-pilot-042",
+      "prompt_tokens": 441,
+      "completion_tokens": 77,
+      "total_tokens": 518,
+      "target_character_count": 113
+    },
+    {
+      "id": "travel-sft-pilot-043",
+      "prompt_tokens": 399,
+      "completion_tokens": 34,
+      "total_tokens": 433,
+      "target_character_count": 55
+    },
+    {
+      "id": "travel-sft-pilot-044",
+      "prompt_tokens": 408,
+      "completion_tokens": 68,
+      "total_tokens": 476,
+      "target_character_count": 98
+    },
+    {
+      "id": "travel-sft-pilot-045",
+      "prompt_tokens": 415,
+      "completion_tokens": 47,
+      "total_tokens": 462,
+      "target_character_count": 70
+    },
+    {
+      "id": "travel-sft-pilot-046",
+      "prompt_tokens": 438,
+      "completion_tokens": 87,
+      "total_tokens": 525,
+      "target_character_count": 135
+    },
+    {
+      "id": "travel-sft-pilot-047",
+      "prompt_tokens": 399,
+      "completion_tokens": 38,
+      "total_tokens": 437,
+      "target_character_count": 58
+    },
+    {
+      "id": "travel-sft-pilot-048",
+      "prompt_tokens": 486,
+      "completion_tokens": 97,
+      "total_tokens": 583,
+      "target_character_count": 139
+    },
+    {
+      "id": "travel-sft-pilot-049",
+      "prompt_tokens": 606,
+      "completion_tokens": 50,
+      "total_tokens": 656,
+      "target_character_count": 69
+    },
+    {
+      "id": "travel-sft-pilot-050",
+      "prompt_tokens": 569,
+      "completion_tokens": 60,
+      "total_tokens": 629,
+      "target_character_count": 82
+    }
+  ]
+}

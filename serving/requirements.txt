@@ -1,0 +1,4 @@
+# New HTTP dependencies only; existing verified ML packages are not reinstalled.
+fastapi==0.141.1
+uvicorn==0.52.1
+httpx==0.28.1

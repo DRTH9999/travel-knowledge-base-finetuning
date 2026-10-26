@@ -1,0 +1,30 @@
+{
+  "status": "assistant_recommended_candidate_for_final_evaluation",
+  "human_signoff": false,
+  "selected_prompt_variant_recommendation": "original_prompt",
+  "model": "Qwen3-8B with revision_v2 epoch1 LoRA",
+  "cloud_adapter_dir": "outputs/revision_v2_epoch1/adapter",
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "adapter_config_sha256": "c74b4e7e700dc2f82ec03299797cc2a39b60d214dbe8dd9d826c06a5a29758a1",
+  "base_model_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "original_business_template_sha256": "f4f298d92c2d7d7dbb90ba3512cf95ccbd17cd537a5b0a3cd4a14748eb7a1ac0",
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "eval_manifest_sha256": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "enable_thinking": false,
+    "max_new_tokens": 512,
+    "warmup_new_tokens": 1,
+    "quantization": "NF4_double_quant_BF16_SDPA"
+  },
+  "known_validation_residuals": [
+    "005 subject/attribute mixing",
+    "014 day-condition mixing",
+    "020 realtime availability/price boundary wording"
+  ],
+  "rejected_candidate_template_sha256": "5cad886194dcae67ff15b33fe259daecf488bbac4cca190778daabfeb2815514",
+  "selection_reason": "Revised rules improve 005/020 but introduce a critical 017 attribution/citation regression; 014 remains.",
+  "production_acceptance_claimed": false,
+  "final_test_predictions_generated": false
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "name": "qwen3-travel-epoch1",
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "adapter_config_sha256": "c74b4e7e700dc2f82ec03299797cc2a39b60d214dbe8dd9d826c06a5a29758a1",
+  "model_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "original_business_template_sha256": "f4f298d92c2d7d7dbb90ba3512cf95ccbd17cd537a5b0a3cd4a14748eb7a1ac0",
+  "eos_token_id": 151645,
+  "tokenizer_assets_sha256": {
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+  },
+  "runtime_versions": {
+    "torch": "2.12.1+cu130",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2",
+    "tokenizers": "0.23.3"
+  },
+  "generation": {
+    "enable_thinking": false,
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 512
+  },
+  "quantization": {
+    "load_in_4bit": true,
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "attn_implementation": "sdpa",
+    "autocast_adapter_dtype": false
+  }
+}

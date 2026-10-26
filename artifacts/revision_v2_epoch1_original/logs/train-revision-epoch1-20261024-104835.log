@@ -1,0 +1,209 @@
+{
+  "status": "EPOCH_TRAIN_PREFLIGHT_OK",
+  "plan": {
+    "num_train_epochs": 1,
+    "max_steps": -1,
+    "sample_count": 82,
+    "parent_count": 50,
+    "supplement_count": 32,
+    "batch_size": 1,
+    "gradient_accumulation": 4,
+    "micro_batches": 82,
+    "optimizer_steps": 21,
+    "last_update_micro_batches": 2,
+    "seed": 42,
+    "data_seed": 42,
+    "learning_rate": 0.0001,
+    "max_length": 2048,
+    "packing": false,
+    "dataloader_drop_last": false
+  },
+  "dataset": {
+    "status": "REVISION_DATA_CHECK_OK",
+    "dataset_version": "revision_v2",
+    "samples": 82,
+    "parent_samples": 50,
+    "supplement_samples": 32,
+    "original_pilot_preserved": true,
+    "used_training_documents": 20,
+    "destination_counts": {
+      "成都": 21,
+      "杭州": 20,
+      "三亚": 21,
+      "云南": 20
+    },
+    "answerability_counts": {
+      "answerable": 54,
+      "unanswerable": 4,
+      "partially_answerable": 24
+    },
+    "supplement_task_counts": {
+      "multi_question": 8,
+      "partially_answerable": 12,
+      "evidence_boundary": 8,
+      "semantic_citation": 4
+    },
+    "reserved_source_in_training": 0,
+    "exact_duplicate_questions": 0,
+    "question_near_duplicate_flags": [],
+    "declared_requirement_mappings_checked": true,
+    "semantic_coverage_auto_verified": false,
+    "user_business_review": "pending",
+    "tokenized": true,
+    "limitations": [
+      "Requirements are author annotations, not proof of semantic coverage.",
+      "Shared evidence/facts are intentional behavior exercises; 82 rows are not 82 independent fact groups.",
+      "Evidence is selected exact source text, not live RAG retrieval; no real-time tourism fact checking."
+    ],
+    "sample_count": 82,
+    "max_tokens": 833,
+    "supervised_tokens": 5605,
+    "tokenized_sha256": "da07c0bfbc382a5198ee8672013bcca6c36f84112c1cdf8e4d94305650c5bc08"
+  },
+  "tokens": {
+    "sample_count": 82,
+    "max_tokens": 833,
+    "supervised_tokens": 5605,
+    "tokenized_sha256": "da07c0bfbc382a5198ee8672013bcca6c36f84112c1cdf8e4d94305650c5bc08"
+  }
+}
+EPOCH_TRAIN_PREFLIGHT_OK
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:36,  4.13it/s]Loading weights:   1%|          | 2/399 [00:00<01:22,  4.81it/s]Loading weights:   3%|▎         | 10/399 [00:00<00:14, 26.11it/s]Loading weights:   7%|▋         | 27/399 [00:00<00:05, 66.81it/s]Loading weights:  12%|█▏        | 48/399 [00:00<00:03, 105.35it/s]Loading weights:  17%|█▋        | 67/399 [00:00<00:02, 128.03it/s]Loading weights:  21%|██        | 83/399 [00:00<00:02, 134.51it/s]Loading weights:  26%|██▌       | 104/399 [00:01<00:01, 154.53it/s]Loading weights:  31%|███▏      | 125/399 [00:01<00:01, 167.15it/s]Loading weights:  36%|███▌      | 144/399 [00:01<00:01, 171.50it/s]Loading weights:  41%|████      | 162/399 [00:01<00:01, 168.63it/s]Loading weights:  45%|████▌     | 181/399 [00:01<00:01, 172.12it/s]Loading weights:  51%|█████     | 202/399 [00:01<00:01, 181.22it/s]Loading weights:  55%|█████▌    | 221/399 [00:01<00:00, 183.12it/s]Loading weights:  60%|██████    | 240/399 [00:01<00:00, 179.88it/s]Loading weights:  65%|██████▍   | 259/399 [00:01<00:00, 174.27it/s]Loading weights:  69%|██████▉   | 277/399 [00:02<00:00, 172.11it/s]Loading weights:  74%|███████▍  | 295/399 [00:02<00:00, 153.83it/s]Loading weights:  78%|███████▊  | 312/399 [00:02<00:00, 155.53it/s]Loading weights:  82%|████████▏ | 328/399 [00:02<00:00, 155.04it/s]Loading weights:  87%|████████▋ | 346/399 [00:02<00:00, 159.21it/s]Loading weights:  92%|█████████▏| 367/399 [00:02<00:00, 166.89it/s]Loading weights:  96%|█████████▌| 384/399 [00:02<00:00, 152.37it/s]Loading weights: 100%|██████████| 399/399 [00:02<00:00, 139.83it/s]
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+  0%|          | 0/21 [00:00<?, ?it/s]  5%|▍         | 1/21 [00:03<01:04,  3.21s/it]                                              {'loss': '2.932', 'grad_norm': '7.75', 'learning_rate': '0.0001', 'entropy': '0.3245', 'mean_token_accuracy': '0.6342', 'num_tokens': '2416', 'epoch': '0.04878'}
+  5%|▍         | 1/21 [00:03<01:04,  3.21s/it] 10%|▉         | 2/21 [00:05<00:49,  2.58s/it]                                              {'loss': '2.662', 'grad_norm': '5.531', 'learning_rate': '0.0001', 'entropy': '0.7549', 'mean_token_accuracy': '0.568', 'num_tokens': '4719', 'epoch': '0.09756'}
+ 10%|▉         | 2/21 [00:05<00:49,  2.58s/it] 14%|█▍        | 3/21 [00:07<00:42,  2.38s/it]                                              {'loss': '2.499', 'grad_norm': '2.781', 'learning_rate': '0.0001', 'entropy': '1.329', 'mean_token_accuracy': '0.4927', 'num_tokens': '7015', 'epoch': '0.1463'}
+ 14%|█▍        | 3/21 [00:07<00:42,  2.38s/it] 19%|█▉        | 4/21 [00:09<00:38,  2.24s/it]                                              {'loss': '2.789', 'grad_norm': '1.578', 'learning_rate': '0.0001', 'entropy': '1.679', 'mean_token_accuracy': '0.4739', 'num_tokens': '9351', 'epoch': '0.1951'}
+ 19%|█▉        | 4/21 [00:09<00:38,  2.24s/it] 24%|██▍       | 5/21 [00:11<00:33,  2.06s/it]                                              {'loss': '2.204', 'grad_norm': '1.305', 'learning_rate': '0.0001', 'entropy': '1.475', 'mean_token_accuracy': '0.5358', 'num_tokens': '1.164e+04', 'epoch': '0.2439'}
+ 24%|██▍       | 5/21 [00:11<00:33,  2.06s/it] 29%|██▊       | 6/21 [00:13<00:29,  1.96s/it]                                              {'loss': '2.013', 'grad_norm': '1.391', 'learning_rate': '0.0001', 'entropy': '1.803', 'mean_token_accuracy': '0.5489', 'num_tokens': '1.368e+04', 'epoch': '0.2927'}
+ 29%|██▊       | 6/21 [00:13<00:29,  1.96s/it] 33%|███▎      | 7/21 [00:14<00:27,  1.96s/it]                                              {'loss': '2.107', 'grad_norm': '1.086', 'learning_rate': '0.0001', 'entropy': '1.591', 'mean_token_accuracy': '0.5485', 'num_tokens': '1.595e+04', 'epoch': '0.3415'}
+ 33%|███▎      | 7/21 [00:14<00:27,  1.96s/it] 38%|███▊      | 8/21 [00:17<00:26,  2.04s/it]                                              {'loss': '2.122', 'grad_norm': '1.07', 'learning_rate': '0.0001', 'entropy': '1.78', 'mean_token_accuracy': '0.5714', 'num_tokens': '1.846e+04', 'epoch': '0.3902'}
+ 38%|███▊      | 8/21 [00:17<00:26,  2.04s/it] 43%|████▎     | 9/21 [00:19<00:24,  2.02s/it]                                              {'loss': '1.66', 'grad_norm': '0.9609', 'learning_rate': '0.0001', 'entropy': '1.75', 'mean_token_accuracy': '0.6108', 'num_tokens': '2.085e+04', 'epoch': '0.439'}
+ 43%|████▎     | 9/21 [00:19<00:24,  2.02s/it] 48%|████▊     | 10/21 [00:21<00:21,  1.98s/it]                                               {'loss': '1.97', 'grad_norm': '1.359', 'learning_rate': '0.0001', 'entropy': '2.061', 'mean_token_accuracy': '0.5571', 'num_tokens': '2.279e+04', 'epoch': '0.4878'}
+ 48%|████▊     | 10/21 [00:21<00:21,  1.98s/it] 52%|█████▏    | 11/21 [00:22<00:19,  1.90s/it]                                               {'loss': '1.601', 'grad_norm': '1.133', 'learning_rate': '0.0001', 'entropy': '1.662', 'mean_token_accuracy': '0.6618', 'num_tokens': '2.496e+04', 'epoch': '0.5366'}
+ 52%|█████▏    | 11/21 [00:22<00:19,  1.90s/it] 57%|█████▋    | 12/21 [00:24<00:17,  1.90s/it]                                               {'loss': '1.812', 'grad_norm': '1.164', 'learning_rate': '0.0001', 'entropy': '2.111', 'mean_token_accuracy': '0.5829', 'num_tokens': '2.714e+04', 'epoch': '0.5854'}
+ 57%|█████▋    | 12/21 [00:24<00:17,  1.90s/it] 62%|██████▏   | 13/21 [00:26<00:14,  1.83s/it]                                               {'loss': '1.452', 'grad_norm': '1.203', 'learning_rate': '0.0001', 'entropy': '1.628', 'mean_token_accuracy': '0.6898', 'num_tokens': '2.913e+04', 'epoch': '0.6341'}
+ 62%|██████▏   | 13/21 [00:26<00:14,  1.83s/it] 67%|██████▋   | 14/21 [00:28<00:12,  1.78s/it]                                               {'loss': '1.819', 'grad_norm': '1.305', 'learning_rate': '0.0001', 'entropy': '1.956', 'mean_token_accuracy': '0.57', 'num_tokens': '3.116e+04', 'epoch': '0.6829'}
+ 67%|██████▋   | 14/21 [00:28<00:12,  1.78s/it] 71%|███████▏  | 15/21 [00:29<00:10,  1.77s/it]                                               {'loss': '1.712', 'grad_norm': '1.234', 'learning_rate': '0.0001', 'entropy': '1.879', 'mean_token_accuracy': '0.6019', 'num_tokens': '3.345e+04', 'epoch': '0.7317'}
+ 71%|███████▏  | 15/21 [00:29<00:10,  1.77s/it] 76%|███████▌  | 16/21 [00:31<00:09,  1.80s/it]                                               {'loss': '1.962', 'grad_norm': '1.664', 'learning_rate': '0.0001', 'entropy': '2.07', 'mean_token_accuracy': '0.5476', 'num_tokens': '3.553e+04', 'epoch': '0.7805'}
+ 76%|███████▌  | 16/21 [00:31<00:09,  1.80s/it] 81%|████████  | 17/21 [00:33<00:07,  1.77s/it]                                               {'loss': '1.928', 'grad_norm': '1.57', 'learning_rate': '0.0001', 'entropy': '1.908', 'mean_token_accuracy': '0.5577', 'num_tokens': '3.764e+04', 'epoch': '0.8293'}
+ 81%|████████  | 17/21 [00:33<00:07,  1.77s/it] 86%|████████▌ | 18/21 [00:35<00:05,  1.75s/it]                                               {'loss': '1.739', 'grad_norm': '1.469', 'learning_rate': '0.0001', 'entropy': '1.808', 'mean_token_accuracy': '0.6777', 'num_tokens': '3.982e+04', 'epoch': '0.878'}
+ 86%|████████▌ | 18/21 [00:35<00:05,  1.75s/it] 90%|█████████ | 19/21 [00:36<00:03,  1.72s/it]                                               {'loss': '1.413', 'grad_norm': '1.547', 'learning_rate': '0.0001', 'entropy': '1.499', 'mean_token_accuracy': '0.6166', 'num_tokens': '4.178e+04', 'epoch': '0.9268'}
+ 90%|█████████ | 19/21 [00:36<00:03,  1.72s/it] 95%|█████████▌| 20/21 [00:38<00:01,  1.78s/it]                                               {'loss': '1.805', 'grad_norm': '1.438', 'learning_rate': '0.0001', 'entropy': '1.825', 'mean_token_accuracy': '0.5771', 'num_tokens': '4.408e+04', 'epoch': '0.9756'}
+ 95%|█████████▌| 20/21 [00:38<00:01,  1.78s/it]100%|██████████| 21/21 [00:39<00:00,  1.53s/it]                                               {'loss': '1.635', 'grad_norm': '2.016', 'learning_rate': '0.0001', 'entropy': '1.541', 'mean_token_accuracy': '0.5796', 'num_tokens': '4.525e+04', 'epoch': '1'}
+100%|██████████| 21/21 [00:39<00:00,  1.53s/it]                                               {'train_runtime': '39.56', 'train_samples_per_second': '2.073', 'train_steps_per_second': '0.531', 'train_loss': '1.992', 'epoch': '1'}
+100%|██████████| 21/21 [00:39<00:00,  1.53s/it]100%|██████████| 21/21 [00:39<00:00,  1.88s/it]
+EPOCH_COVERAGE_OK
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:33,  4.27it/s]Loading weights:   1%|          | 2/399 [00:00<01:19,  4.97it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:08, 46.72it/s]Loading weights:  10%|▉         | 38/399 [00:00<00:03, 92.79it/s]Loading weights:  15%|█▍        | 59/399 [00:00<00:02, 124.93it/s]Loading weights:  20%|█▉        | 78/399 [00:00<00:02, 143.22it/s]Loading weights:  24%|██▍       | 95/399 [00:00<00:02, 149.61it/s]Loading weights:  29%|██▉       | 115/399 [00:01<00:01, 163.85it/s]Loading weights:  34%|███▍      | 136/399 [00:01<00:01, 176.02it/s]Loading weights:  39%|███▉      | 155/399 [00:01<00:01, 178.55it/s]Loading weights:  44%|████▎     | 174/399 [00:01<00:01, 178.50it/s]Loading weights:  48%|████▊     | 193/399 [00:01<00:01, 174.38it/s]Loading weights:  54%|█████▍    | 215/399 [00:01<00:01, 180.58it/s]Loading weights:  59%|█████▉    | 237/399 [00:01<00:00, 184.53it/s]Loading weights:  65%|██████▍   | 259/399 [00:01<00:00, 187.89it/s]Loading weights:  70%|██████▉   | 278/399 [00:01<00:00, 185.76it/s]Loading weights:  74%|███████▍  | 297/399 [00:02<00:00, 165.96it/s]Loading weights:  79%|███████▊  | 314/399 [00:02<00:00, 154.92it/s]Loading weights:  84%|████████▍ | 335/399 [00:02<00:00, 165.30it/s]Loading weights:  89%|████████▉ | 356/399 [00:02<00:00, 175.13it/s]Loading weights:  94%|█████████▎| 374/399 [00:02<00:00, 172.27it/s]Loading weights:  98%|█████████▊| 392/399 [00:02<00:00, 147.97it/s]Loading weights: 100%|██████████| 399/399 [00:02<00:00, 148.39it/s]
+{
+  "status": "REVISION_EPOCH_TRAIN_OK",
+  "experiment": "revision_v2_epoch1_v1",
+  "created_at_utc": "2026-10-24T02:48:42.224888+00:00",
+  "dataset_version": "revision_v2",
+  "dataset": {
+    "status": "REVISION_DATA_CHECK_OK",
+    "dataset_version": "revision_v2",
+    "samples": 82,
+    "parent_samples": 50,
+    "supplement_samples": 32,
+    "original_pilot_preserved": true,
+    "used_training_documents": 20,
+    "destination_counts": {
+      "成都": 21,
+      "杭州": 20,
+      "三亚": 21,
+      "云南": 20
+    },
+    "answerability_counts": {
+      "answerable": 54,
+      "unanswerable": 4,
+      "partially_answerable": 24
+    },
+    "supplement_task_counts": {
+      "multi_question": 8,
+      "partially_answerable": 12,
+      "evidence_boundary": 8,
+      "semantic_citation": 4
+    },
+    "reserved_source_in_training": 0,
+    "exact_duplicate_questions": 0,
+    "question_near_duplicate_flags": [],
+    "declared_requirement_mappings_checked": true,
+    "semantic_coverage_auto_verified": false,
+    "user_business_review": "pending",
+    "tokenized": true,
+    "limitations": [
+      "Requirements are author annotations, not proof of semantic coverage.",
+      "Shared evidence/facts are intentional behavior exercises; 82 rows are not 82 independent fact groups.",
+      "Evidence is selected exact source text, not live RAG retrieval; no real-time tourism fact checking."
+    ],
+    "sample_count": 82,
+    "max_tokens": 833,
+    "supervised_tokens": 5605,
+    "tokenized_sha256": "da07c0bfbc382a5198ee8672013bcca6c36f84112c1cdf8e4d94305650c5bc08"
+  },
+  "token_checks": {
+    "sample_count": 82,
+    "max_tokens": 833,
+    "supervised_tokens": 5605,
+    "tokenized_sha256": "da07c0bfbc382a5198ee8672013bcca6c36f84112c1cdf8e4d94305650c5bc08"
+  },
+  "plan": {
+    "num_train_epochs": 1,
+    "max_steps": -1,
+    "sample_count": 82,
+    "parent_count": 50,
+    "supplement_count": 32,
+    "batch_size": 1,
+    "gradient_accumulation": 4,
+    "micro_batches": 82,
+    "optimizer_steps": 21,
+    "last_update_micro_batches": 2,
+    "seed": 42,
+    "data_seed": 42,
+    "learning_rate": 0.0001,
+    "max_length": 2048,
+    "packing": false,
+    "dataloader_drop_last": false
+  },
+  "tokenizer_recheck": "REVISION_TOKENIZER_CHECK_OK",
+  "initialization": "fresh_base_and_fresh_lora_no_adapter_resume",
+  "model_dir": "/root/autodl-tmp/models/Qwen3-8B",
+  "output_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/outputs/revision_v2_epoch1",
+  "versions": {
+    "torch": "2.12.1+cu130",
+    "transformers": "5.20.2",
+    "trl": "1.16.0",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "model_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "dataset_manifest_sha256": "264cfd5df4b000e483894060bab834bcbbec3c273f52f74f24fef1579cc84669",
+  "eval_manifest_sha256": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+  "training_code_sha256": {
+    "training/train_revision_epoch.py": "a2953cb7d5f19909a149a390c375d585d22c5ef6368aa0d4c0e5f80036a0da0e",
+    "epoch_pipeline/training_core.py": "667040fa40b7f0ef5cd0fbd664c39b7bacdcc9b4003e442636a9f716c4b2baaa",
+    "epoch_pipeline/coverage.py": "b83de87e1febb9ec7dd33fcb73b9063cd46ca0dc8d3394a4b6e95f05ae5ec290",
+    "epoch_pipeline/preflight.py": "976c10f8c39e4c747742fc53e6aa803b1e1d2e1bdc7ddf0f6d803a6195b269f4",
+    "revision_pipeline/legacy_training_core.py": "d789a0f46a99ee81509fb819b5eae5437e9c6b1c7665706faac5d291e6bdebf6"
+  },
+  "quality_evaluation_performed": false,
+  "training_peak_allocated_vram_gib": 9.271,
+  "training_peak_reserved_vram_gib": 10.799,
+  "training_and_load_seconds": 45.5,
+  "reload": {
+    "parameter_tensors": 504,
+    "saved_and_reloaded_weights_equal": true,
+    "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9"
+  },
+  "reload_generation": {
+    "sample_id": "travel-sft-revision-001",
+    "answer": "春熙路和太古里适合重视交通便利、商圈配套、晚上热闹的人，把城市中心感和吃饭、逛街、出行结合起来。[1]\n\n宽窄巷子和人民公园周边适合偏好老城气质、慢节奏街区、茶馆氛围和老成都感的人，把住宿和城市散步、老城体验结合起来。[1]\n\n如果次日主要赶机场或高铁，可优先考虑南站和金融城，把接驳效率、商务出行、跨城转场等需求纳入住宿选择。[1]",
+    "note": "Functionality check on a training sample, not independent quality evaluation."
+  },
+  "total_seconds": 57.05
+}
+{"coverage": "EPOCH_COVERAGE_OK", "unique_trained_samples": 82, "optimizer_steps": 21, "parent_samples": 50, "supplement_samples": 32, "actual_epochs": 1.0, "final_training_loss": 1.9921412411190214}
+REVISION_EPOCH_TRAIN_OK

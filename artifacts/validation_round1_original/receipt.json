@@ -1,0 +1,8 @@
+{
+  "status": "CLOUD_EVAL_ARCHIVE_VERIFIED",
+  "archive_sha256": "d809eda41617eb5fd94b45ed9fa0b3c1c32ff0c2f50c1253e7245b904b2e8e5b",
+  "eval_manifest_sha256": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+  "adapter_sha256": "c75a2da1a2a35b51b0653a33a83a43584d23f8532a4d3bde069c853c1e3e2336",
+  "paired_inputs_verified": 24,
+  "test_predictions_present": false
+}

@@ -1,0 +1,92 @@
+{
+  "status": "TRAIN_SMOKE_OK",
+  "time_utc": "2026-10-23T13:04:43.789059+00:00",
+  "model_dir": "/root/autodl-tmp/models/Qwen3-8B",
+  "dataset": {
+    "samples": 50,
+    "max_tokens": 833,
+    "supervised_tokens": 3395,
+    "tokenized_sha256": "582f7950be295189a28e2b6ea58cae9c8cfa4efac402a7a3b4c70007db81a6f9"
+  },
+  "output_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/outputs/smoke_20261023_210443",
+  "versions": {
+    "torch": "2.12.1+cu130",
+    "transformers": "5.20.2",
+    "trl": "1.16.0",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "quality_evaluation_performed": false,
+  "training": {
+    "optimizer_steps": 10,
+    "gradient_checked_steps": 10,
+    "loss_history": [
+      {
+        "step": 1,
+        "loss": 4.551334381103516
+      },
+      {
+        "step": 2,
+        "loss": 2.9403507709503174
+      },
+      {
+        "step": 3,
+        "loss": 2.318956136703491
+      },
+      {
+        "step": 4,
+        "loss": 2.328324556350708
+      },
+      {
+        "step": 5,
+        "loss": 1.8853477239608765
+      },
+      {
+        "step": 6,
+        "loss": 1.9601603746414185
+      },
+      {
+        "step": 7,
+        "loss": 2.2568700313568115
+      },
+      {
+        "step": 8,
+        "loss": 2.0819990634918213
+      },
+      {
+        "step": 9,
+        "loss": 1.8779950141906738
+      },
+      {
+        "step": 10,
+        "loss": 2.291304111480713
+      }
+    ],
+    "final_training_loss": 2.4492642164230345,
+    "probe_parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+    "probe_max_absolute_update": 0.0009765625,
+    "trainable_parameters": 43646976,
+    "collator_checks": {
+      "checked_samples": 50,
+      "original_labels_preserved": true,
+      "padding_labels_masked": true
+    }
+  },
+  "training_peak_allocated_vram_gib": 9.27,
+  "training_peak_reserved_vram_gib": 10.799,
+  "training_and_first_load_seconds": 33.68,
+  "reload": {
+    "parameter_tensors": 504,
+    "saved_and_reloaded_weights_equal": true,
+    "adapter_sha256": "c75a2da1a2a35b51b0653a33a83a43584d23f8532a4d3bde069c853c1e3e2336"
+  },
+  "reload_generation": {
+    "sample_id": "travel-sft-pilot-005",
+    "answer": "地铁加步行能应付，因为杭州地铁适合连接机场、高铁站和主城区，主要活动范围在湖滨、商业区和西湖周边，地铁加步行通常就够用[1]。",
+    "note": "Training example; functionality check, not an independent evaluation."
+  },
+  "total_seconds": 42.56
+}

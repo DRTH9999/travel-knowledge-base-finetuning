@@ -1,0 +1,18 @@
+{
+  "max_steps": 10,
+  "batch_size": 1,
+  "gradient_accumulation": 4,
+  "effective_batch_size": 4,
+  "learning_rate": 0.0001,
+  "max_length": 2048,
+  "packing": false,
+  "gradient_checkpointing": true,
+  "trainable_parameters": 43646976,
+  "label_policy": "use_verified_precomputed_labels_only",
+  "collator_checks": {
+    "checked_samples": 50,
+    "original_labels_preserved": true,
+    "padding_labels_masked": true
+  },
+  "evaluation": "none; training pipeline smoke check only"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "LOCAL_SERVING_CHECK_OK",
+  "checked_at_utc": "2026-10-24T06:19:32.283467+00:00",
+  "user_selected_stack": "A: Transformers + PEFT + bitsandbytes + FastAPI/Uvicorn",
+  "pytest": {
+    "passed": 23,
+    "failed": 0,
+    "scope": "CPU fake-engine protocol/lifecycle, real TCP LangChain invoke/stream and disconnect, plus real Qwen3 tokenizer"
+  },
+  "real_tokenizer_inputs_verified": 48,
+  "real_gpu_generation_verified": false,
+  "cloud_service_started": false,
+  "remote_connection_verified": false,
+  "rag_source_modified": false,
+  "paid_api_calls": 0,
+  "shell_scripts": {
+    "bash_syntax_checked": 3,
+    "checker": "E:/Git/bin/bash.exe -n",
+    "linux_installation_executed": false
+  },
+  "local_runtime": {
+    "python": "3.13.9",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.20.2",
+    "tokenizers": "0.23.3",
+    "fastapi": "0.141.1",
+    "uvicorn": "0.52.1",
+    "httpx": "0.28.1",
+    "pydantic": "2.13.4",
+    "langchain-openai": "1.4.1",
+    "langchain-core": "1.5.3"
+  },
+  "warning": "Starlette TestClient emits an AnyIO BlockingPortal deprecation warning; checks pass.",
+  "limitations": [
+    "No local full 8B model loading or CUDA inference.",
+    "Cloud ML versions are pinned and must pass preflight; local Torch differs.",
+    "Initial input/output total budget 2048, output at most 512; long real RAG inputs unverified.",
+    "Existing assessed fixtures are compatibility regression, not independent new quality evaluation."
+  ]
+}

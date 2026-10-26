@@ -1,0 +1,931 @@
+{
+  "summary": {
+    "status": "PROMPT_V2_ASSISTANT_REVIEW_COMPLETE",
+    "reviewed_at_utc": "2026-10-24T03:37:10.452870+00:00",
+    "assessor": "Codex assistant; same assistant involved in data/rule authoring; not independent human review or a blind assessment",
+    "human_signoff": false,
+    "score_scale": "Five dimensions 0-2, total 0-10; auxiliary rubric score, not accuracy",
+    "archive_sha256": "ffd942b62cc26b2c01609b2f83714b400e6b72b741b9ebb3cf36948d80db80b5",
+    "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+    "original_control_reproduced": 24,
+    "paired_payloads_verified": 24,
+    "same_answers": 4,
+    "changed_answers": 20,
+    "newly_source_reviewed": 20,
+    "prior_semantic_reviews_reused": 28,
+    "review_count": 48,
+    "variants": {
+      "original_prompt": {
+        "mean_total": 9.75,
+        "mean_scores": {
+          "faithfulness": 1.9166666666666667,
+          "completeness": 2.0,
+          "citation_support": 1.9166666666666667,
+          "answerability": 1.9583333333333333,
+          "constraints_format": 1.9583333333333333
+        },
+        "mean_output_tokens": 57.625,
+        "mean_generation_seconds": 2.6985875,
+        "format_flag_counts": {
+          "empty_answer": 0,
+          "contains_think_tags": 0,
+          "invalid_reference_ids": 0,
+          "irrelevant_reference_ids": 0,
+          "missing_gold_reference_ids": 0,
+          "hit_output_limit": 0
+        }
+      },
+      "revised_prompt": {
+        "mean_total": 9.708333333333334,
+        "mean_scores": {
+          "faithfulness": 1.875,
+          "completeness": 2.0,
+          "citation_support": 1.875,
+          "answerability": 2.0,
+          "constraints_format": 1.9583333333333333
+        },
+        "mean_output_tokens": 50.625,
+        "mean_generation_seconds": 2.4510875,
+        "format_flag_counts": {
+          "empty_answer": 0,
+          "contains_think_tags": 0,
+          "invalid_reference_ids": 0,
+          "irrelevant_reference_ids": 0,
+          "missing_gold_reference_ids": 1,
+          "hit_output_limit": 0
+        }
+      }
+    },
+    "paired_rubric": {
+      "higher_ids": [
+        "travel-eval-validation-005",
+        "travel-eval-validation-020"
+      ],
+      "tied_ids": [
+        "travel-eval-validation-001",
+        "travel-eval-validation-002",
+        "travel-eval-validation-003",
+        "travel-eval-validation-004",
+        "travel-eval-validation-006",
+        "travel-eval-validation-007",
+        "travel-eval-validation-008",
+        "travel-eval-validation-009",
+        "travel-eval-validation-010",
+        "travel-eval-validation-011",
+        "travel-eval-validation-012",
+        "travel-eval-validation-013",
+        "travel-eval-validation-014",
+        "travel-eval-validation-015",
+        "travel-eval-validation-016",
+        "travel-eval-validation-018",
+        "travel-eval-validation-019",
+        "travel-eval-validation-021",
+        "travel-eval-validation-022",
+        "travel-eval-validation-023",
+        "travel-eval-validation-024"
+      ],
+      "lower_ids": [
+        "travel-eval-validation-017"
+      ]
+    },
+    "target_issues": {
+      "005": "subject_mixing_removed",
+      "014": "day_condition_confusion_remains",
+      "020": "unknown_booking_availability_boundary_improved"
+    },
+    "critical_regressions": {
+      "017": "island_overnight_stay_inherits_mainland_neighborhood_convenience_and_wrong_citation"
+    },
+    "automatic_missing_reference_010_is_semantically_benign": true,
+    "recommendation": "Keep original prompt for the existing epoch1 candidate; do not promote prompt_v2 wholesale based on this comparison.",
+    "candidate_model_or_prompt_changed_by_this_review": false,
+    "test_predictions_generated": false,
+    "limitations": [
+      "Validation has repeatedly guided rules and training; it is not independent final evaluation.",
+      "Only 24 synthetic questions from one destination share five short documents.",
+      "Same assistant authored material and reviewed outputs; human signoff remains pending.",
+      "Identical revised answers reuse semantic assessment based on exact question/evidence/history/answer, not on identical prompt tokens; revised prefix tokens differ by design.",
+      "Small rubric-score differences are not statistical evidence or a general benchmark.",
+      "Latency is uncontrolled and answer lengths differ; no speed or cost advantage claim.",
+      "No adapter weights are in this result archive; identity is bound to the previously downloaded weight file and recorded hashes."
+    ]
+  },
+  "reviews": [
+    {
+      "id": "travel-eval-validation-001",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "完整保留厦门站适合岛内片区、厦门北站偏高铁转场且需接驳的区别，[1]支持全部陈述。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8c92663b47e7fe736ae914d4f92ee78449bcbc47185fc74f290f5bb7dab1660f",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-001",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "完整保留厦门站适合岛内片区、厦门北站偏高铁转场且需接驳的区别，[1]支持全部陈述。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8c92663b47e7fe736ae914d4f92ee78449bcbc47185fc74f290f5bb7dab1660f",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-002",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "已恢复10步时漏掉的上岛环节：不能直接步行、需要轮渡，以及码头、船票、候船、乘船、步行入岛均覆盖，[1]支持。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "0f6356cb9142f44af9ba9a034891ccb7bd09547b3cdad355037b6a53b1daa402",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-002",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "仍说明不能直接步行、必须轮渡，并保留码头、船票、候船、乘船、步行入岛各环节，[1]支持，未退回之前的流程漏答。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "9131b185ae7e20acac57dbfd4e739adcb466020ce192675ce5bc0dfb670981a8",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-003",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "点对点打车直接回应多人、行李与不想研究换乘，距离相对可控等信息也来自[1]，没有扩写票价或具体平台。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "0903e47b48d9d1fda437ab48c248a8a8e050e22e76f06b9ac60e85e844274eb5",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-003",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "点对点打车及行李/多人/时间条件仍受[1]支持，调整措辞没有改变事实或新增平台价格。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "ea5d29a0e287fb4a757e3da1cef3b70e2bf6a0493d75e36794634384d89dfa52",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-004",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "保留整岛建筑、坡道、小巷、氛围和步行体验的重点，并建议留主要时段慢逛；虽省略“不是单个地标”的原句，核心对比已回答。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8fdf4e3eba636fd0ab0a87a83823ee825ac740b7af119bfc8fbdc54eebe57f41",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-004",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "保留整岛建筑、坡道、小巷、氛围和步行体验的重点，并建议留主要时段慢逛；虽省略“不是单个地标”的原句，核心对比已回答。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8fdf4e3eba636fd0ab0a87a83823ee825ac740b7af119bfc8fbdc54eebe57f41",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-005",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 8,
+      "rationale": "新出现的轻微主体混用：简餐选沙茶面、正餐选姜母鸭正确；但将姜母鸭进一步说成“适合搭配海鲜或滨海休闲场景”。原文把滨海/海边休闲场景赋给海鲜，未给出姜母鸭的该限定或搭配建议，句末[1]不能完整支撑这部分扩写。这里不判断现实中这样搭配是否可行。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "1f689163539bd91912f0bb0cc8425653547592d59b7d1fdbf88deb6c47220865",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-005",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "本次改善：只把沙茶面安排简餐、姜母鸭安排地方正餐，删除了把海鲜的滨海休闲场景迁给姜母鸭的扩写；两个结论均受[1]支持。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "a58fb1c7f3f1d18e9218e65e71e4619938911a835c80516012a4d80b994a7efd",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-006",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "保持已修复的两面回答：氛围收益与行李搬运、上岛组织、返程复杂度均来自同一[1]。第二段可补就近[1]，但唯一资料已标明且不存在错误来源，不把标注位置优化当作语义错引。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "6e61a571f5a8e69bd152446c6e93b81f4b97b4254a1bd628bed148f0712a03bc",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-006",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "氛围收益及搬运行李/上岛/返程复杂度都保留，均来自唯一[1]；第二段仍可补就近引用，未因新增规则就自动认为引用位置已经改善。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "4e5639e500413a71b4b5688b6a7cf7e58b8224462a9958d1d0511ebbe5a93a52",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-007",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "用海边休闲与城市慢节奏的住宿定位回应看海、骑行和散步偏好，沙滩/餐饮等描述均受[1]支持。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "583d28da72757e45cecbcd5ee70b713891196d534bcd0a849de834efbcb5c17b",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-007",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "海边生活感、沙滩、骑行、海边散步和餐饮定位与[1]一致，没有把区域建议变成具体酒店服务承诺。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "84a8c250617efeaadf3568a42777f4d7bbcf6c106b8028828394bb565e548201",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-008",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "明确鼓浪屿补充、本岛系统觅食，并补出中山路、八市、老城主线；海边休闲定位也在同一[1]中，增加篇幅未添加新事实。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "99638e128e1778b8af6d271fc77cb1edcb5564da5b460d9ae9665ac9f7cca51b",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-008",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "缩短为鼓浪屿补充、本岛系统觅食，仍直接回应是否把全部用餐安排岛上的问题。没有要求列全食物和街区，删去背景不属于核心漏答。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "1552a7f68899f5d495030ffa067681fb8ce150ccfec34fbc6800ef788bc57afe",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-009",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "住宿方向及三类码头核对均清楚，分别由[1][2]支持。没有再次逐字列出航线/班次，但已回应主要上岛前核对事项，不要求复述片段所有事实。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "2a7d4a4f15ee846d975d760541eaf1d6c11c8c266a6177efe016abdf6c8bbf2e",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-009",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "住宿片区及三类码头核对仍分别由[1][2]支持。没有复述全部调整提醒，不影响问题主要需求。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "452ce33a0bf8f62ac82c1b6a61cfe7a72705e6b20ebe1498574d20f283608bd6",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-010",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "已恢复10步时漏掉的第三天海边安排；第一天老城、鼓浪屿完整时段、第三天海边形成三天顺序，鼓浪屿虽未写“第二天”字样但位置已明确。分开本岛和岛上节奏的理由受[2]支持。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "84968aca1902030191a4fc3dca189b7a1f289eb0bb09168809ef400808bbd5d9",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-010",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "老城、鼓浪屿完整时段与第三天海边仍构成清楚顺序，全部由[1]支持；删去独立背景解释后未引用[2]不构成错引或漏答。自动缺引提示属于冗余参考未用。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "a2718d0aba810e3750022b0217a69384659956bb7244633e73e60f5226585c2f",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-011",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "地铁加网约车与夜间中山路/轮渡片区均来自对应片段；住宿方向可从问题语境理解，符合不自驾和夜间便利要求。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "7f3b5b13b57feb9830d32e924353a8962ec357c6b3570d3f3a65369f960d1ceb",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-011",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "交通组合及夜间重便利的住宿区域都有对应依据；“比海边区域更稳妥”是对[2]便利/慢游取向的合理比较，没有新增设施事实。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "811ddd85ef5c31b1e96ce67b616d6df8f93d82e8ab9fc540a2bfad91c94debb5",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-012",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "已说清慢游住一晚与行李/上岛成本较高的权衡，并说明步行为主、不适合带大件高频往返，分别引用[1][2]；没有再补造寄存服务，也不再有“住岛外再安排一晚”的歧义。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "0fb9405af44b9df83a4e88025687bf0e44c98ab657a3fb8a6a1c1519c0c0b996",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-012",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "住一晚慢游与行李/上岛成本的权衡、步行为主和不宜大件高频往返都保留，引用对应，未重现寄存臆测。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "9d47aa9d75a0fe66b363160148c81f175ecd55c2e14888024d51349ba0c84890",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-013",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "按觅食和边走边逛选老城，并说明海边松弛的替代方向，两个来源分别对应。旧答只引用[1]也足够支持其更窄的结论，因此不能把本轮补齐[2]当作自动证明旧答错误。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8d411a9d8b0f8f7519a831d30ef0889a311d7759ae6c00bf1b56fddb3b4a2370",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-013",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "仍优先老城并说明海边可选；第二段[2]把吃喝上岛便利和海边散步松弛区分开。第一段“海边住宿可选”也应更就近标[2]，但整体两段来源足以支持取舍，未构成新的事实错误。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "bc260b4f404716b19076da512581e686c31a5d7d383a7d74bc02c2a392cc9d1a",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-014",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 1
+      },
+      "total": 7,
+      "rationale": "条件混用仍在：第一段在“2天主线”后接环岛路/曾厝垵/厦大周边收尾并挂[1]，但[1]只有本岛老城+鼓浪屿，[2]把这些收尾选项置于第三天。第二段说两天应缩减，方向正确，却未消除前段给两天追加收尾的歧义；未清楚落实不赶行程的取舍。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "f9f6ace0c3a5d5304324d78d145f564cb12524fddacba0ad504c8550d57f5635",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-014",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 1,
+        "completeness": 2,
+        "citation_support": 1,
+        "answerability": 2,
+        "constraints_format": 1
+      },
+      "total": 7,
+      "rationale": "目标问题未解决：第一句两天主线与[1]对齐，但第二句“如果只有2天，第3天可以缩减”仍混用天数条件，接着又把海边点作为收尾。[2]原意是三天可安排、两天可缩减这部分，当前没有清楚区分，仍可能把可删内容加回两天行程。沿用上轮轻微忠实/引用/约束问题的分数。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "8f614389feb713a3458ff5593c5d4124709c6a2eb4cff930b9c6ed784f2c8494",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-015",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "厦门站、市中心、换乘便利和停留长短的取舍均在给定资料中。表达“短时短住”略重复，第二段交通/城市功能也参考了[1]，可让引用更就近，但主结论与两份来源没有冲突。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8b5d8b6f4ae22089688604f6d45032a307d09d7bc017af896d13dfdc3dbd4d79",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-015",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "短住优先厦门站/市中心、重换乘城市功能的建议与整体证据一致。第二段交通和城市功能具体来自[1]，引用可以更精确；与原版相似，不因重复描述或省略长住比较强行扣分。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "4ae3e18e6d14d0082fff46c665f6b4e38a6685e9fe11749cd30576d1e9bd6d62",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-016",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "删去了10步回答中无当前依据的“公交是厦门的特色”，保留预算、时间弹性与热门片区的正确适用条件，[1]支持。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "605f6bb5a9f3d7935adc7c0e9cf5a629bcbdab40fa2a9ceabee7999139255544",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-016",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "删去了10步回答中无当前依据的“公交是厦门的特色”，保留预算、时间弹性与热门片区的正确适用条件，[1]支持。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "605f6bb5a9f3d7935adc7c0e9cf5a629bcbdab40fa2a9ceabee7999139255544",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-017",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "关键改善：不再编造岛上住宿稀缺或缺超市/餐厅/洗衣店，而是用[2]支持中山路/轮渡的便利，再用[1]说明不是必须住岛上。住一晚的体验措辞是对[1]的合理概括，不涉及具体设施或服务承诺。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "e23606e6ada0954bdf7b52a3a0e66d1a22da545de2c319c0d21156dbbf9e7013",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-017",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 0,
+        "completeness": 2,
+        "citation_support": 0,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 6,
+      "rationale": "关键退步：把“住鼓浪屿一晚”说成能增加老城散步、轮渡上岛和夜间活动的便利，并挂[1]。但[1]只讲可选住岛和氛围，相关便利在[2]明确属于中山路/轮渡片区，主体与来源均被混用。后两段仍推荐本岛片区，所以完整性保留；这条错误却正影响用户重视便利的住宿判断，按关键忠实性及语义错引计，而非普通措辞问题。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "faf2d0dce93832968b0a6d6fe599eeb2fd891e0d33d56752f013d55ac07bab8a",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-018",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "更明确地纠正历史中的步行上岛错误，说明轮渡必要性并保留三类码头核对，[1][2]支持。本题未要求列全购票候船流程，不照搬002的完整性要求扣分。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "cf18e62f7d6bbf3f87ec371b55adaca4231151b03d1561d2a0694fcdc05d14cf",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-018",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "仍纠正直接步行的历史错误，补齐上岛流程和码头核对，事实都在两段证据内。后段“轮渡必要”更宜标[1]、核对事项标[2]，属于引用就近性优化，没有引入017那种错误主体事实。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "c89a63d76e7dfcb126df738ed23e501ca89efe3b6c7ea1c2a679af164e00006d",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-019",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "已同时说明末班时间/票价未提供、需查最新信息，并给出已有三类码头核对事项；不再误拒答或省略未知边界。[1]标在资料缺失句后，建议移到核对清单后使映射更清楚；当前只有这一个片段且清单确实来自它，未判为实质错引。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8cdda8c65d686eeece9ca1c0ada5d40568b0397171224841851e324d4fd17dee",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-019",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "已同时说明末班时间/票价未提供、需查最新信息，并给出已有三类码头核对事项；不再误拒答或省略未知边界。[1]标在资料缺失句后，建议移到核对清单后使映射更清楚；当前只有这一个片段且清单确实来自它，未判为实质错引。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "8cdda8c65d686eeece9ca1c0ada5d40568b0397171224841851e324d4fd17dee",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-020",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 1,
+        "constraints_format": 2
+      },
+      "total": 9,
+      "rationale": "边界明显改善：给出片区适用人群和便利，并明确不能保证具体房态，没有承诺有房或编造价格。但“如果今晚查不到”仍是条件式说法，未直接说明当前资料缺少实时库存与价格、无法确认300元内双床房；价格边界尚不够明确。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "b3911f3a30a1f055672c6625ca423fd250747743e2039f87e70561bcd88c706d",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-020",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "本次改善：直接说资料没有今晚300元内双床房实时库存，不能确认是否可订，再给片区适用人群；预算内是否可订的未知边界已经明确，没有声称查过房态。[1]可移到已知片区定位后，但唯一资料与结论映射可辨。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "9a45bc34c843e3ad178f24fe8ce7564282f5064e37639c218c7efcb9e244a896",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-021",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "正确说明缺少指定日期天气/温度，指向气象预报，较旧通用景区公告更贴合业务；没有编造天气数值。按原口径，渠道针对性改进不额外增加满分之上的分数。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "ddeb86f27167ea974860d64107071bf1a6f5f97991c23a16bf11563cac62b157",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-021",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "仍明确无法确认指定日期下雨与最高温，指向实时天气预报，没有编造数据或混用景区渠道。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "fecaa5e96207489123f7e981d3a79126cf29ce8f88abac0889476f7eec1cac78",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-022",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "没有资料时明确无法确认宠物政策与押金，并建议联系酒店；不补造收费或引用，渠道也比旧答更贴切。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "89f7564d2206f34c392662ea102b19957819d5a0093e08f9708a63e8523e9c2f",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-022",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "无资料时明确无法确认宠物政策和押金，没有补造事实；删去了联系酒店的操作建议，实用性可优化，但用户没有额外要求查询渠道，沿用语义审核口径不单独扣分。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "4f017395e43fd42e0c31e98728a792cac4c0cf26f871e11088753f4add136b78",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-023",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "仍只选直接支持住宿方向的[2]，没有被小吃与海边干扰片段带偏，事实与引用一致。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "45dc21cd90ce763de8dc45fe58900eee47e7b78060b43362e4bc094522511538",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-023",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "仍只用[2]支持住宿方向，生活/吃饭/上岛组织的描述对应，没有被干扰片段带偏。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "ad51533e4a6c0a80b5e57915c896cddab84af2161beeb4343e4bd4933c89a1e5",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-024",
+      "variant": "original_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "对准确酒店房价正确拒答，并指向实时预订平台/酒店官网；没有把小吃资料当成房价依据，也未添加数字。",
+      "review_method": "prior_semantic_review_reused_after_exact_question_evidence_history_answer_identity",
+      "prediction_sha256": "890044b7962e5efee30eabef7c91c5612f685b2da808a6577d387d4bff42b5f0",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    },
+    {
+      "id": "travel-eval-validation-024",
+      "variant": "revised_prompt",
+      "scores": {
+        "faithfulness": 2,
+        "completeness": 2,
+        "citation_support": 2,
+        "answerability": 2,
+        "constraints_format": 2
+      },
+      "total": 10,
+      "rationale": "仍正确拒答无资料的酒店准确房价；删去官网/平台查询建议使后续行动较少，但没有编造价格或用小吃作依据，保留事实与边界评分。",
+      "review_method": "changed_prompt_answer_read_against_complete_evidence",
+      "prediction_sha256": "82ced53c779d57a4861834051e2f81c01d51aa46bfd553ca7c1c120c4f5e28ac",
+      "human_signoff": false,
+      "status": "assistant_reviewed_user_pending"
+    }
+  ]
+}

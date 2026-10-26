@@ -1,0 +1,177 @@
+{
+  "status": "DATA_CHECK_OK",
+  "sample_count": 50,
+  "task_counts": {
+    "single_evidence": 15,
+    "multi_evidence": 12,
+    "constrained_planning": 8,
+    "history_followup": 5,
+    "insufficient_evidence": 8,
+    "distractor_filtering": 2
+  },
+  "destination_counts": {
+    "成都": 13,
+    "杭州": 12,
+    "三亚": 13,
+    "云南": 12
+  },
+  "answerability_counts": {
+    "answerable": 42,
+    "unanswerable": 4,
+    "partially_answerable": 4
+  },
+  "source_documents_total": 30,
+  "used_training_documents": 20,
+  "context_occurrences": 92,
+  "unique_source_excerpts": 72,
+  "reserved_source_in_training_count": 0,
+  "exact_duplicate_questions": 0,
+  "exact_duplicate_answers": 0,
+  "question_near_duplicates": [],
+  "unmatched_arabic_number_flags": [],
+  "max_business_prompt_characters": 1113,
+  "model_weights_loaded": false,
+  "training_started": false,
+  "tokenizer_status": "local_render_and_label_checks_passed_cloud_recheck_pending",
+  "semantic_entailment_auto_verified": false,
+  "user_review_status": "pending",
+  "max_total_tokens": 833,
+  "suggested_pilot_max_length": 2048
+}
+TRAINING_DATA_PREFLIGHT_OK {"samples": 50, "max_tokens": 833, "supervised_tokens": 3395, "tokenized_sha256": "582f7950be295189a28e2b6ea58cae9c8cfa4efac402a7a3b4c70007db81a6f9"}
+{
+  "status": "TOKENIZER_CHECK_OK",
+  "samples": 50,
+  "local_files_only": true,
+  "model_weights_loaded": false,
+  "transformers_version": "5.20.2",
+  "tokenizers_version": "0.23.3",
+  "eos_token": "<|im_end|>",
+  "eos_token_id": 151645,
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "tokenizer_assets_sha256": {
+    "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "tokenizer_config.json": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+    "config.json": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30"
+  },
+  "mode": "enable_thinking=False",
+  "prefix_contains_empty_think_prefill": true,
+  "supervised_region": "direct_answer_and_one_terminal_eos_only",
+  "truncated_samples": 0,
+  "all_prefix_labels_masked": true,
+  "total_supervised_tokens": 3395,
+  "min_total_tokens": 422,
+  "max_total_tokens": 833,
+  "p95_total_tokens": 756,
+  "max_prompt_tokens": 702,
+  "max_completion_tokens": 131,
+  "suggested_pilot_max_length": 2048
+}
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:55,  3.45it/s]Loading weights:   1%|          | 2/399 [00:00<02:04,  3.18it/s]Loading weights:   1%|          | 4/399 [00:00<01:01,  6.47it/s]Loading weights:   3%|▎         | 12/399 [00:00<00:17, 22.63it/s]Loading weights:   4%|▍         | 17/399 [00:00<00:13, 27.72it/s]Loading weights:   7%|▋         | 27/399 [00:01<00:08, 43.77it/s]Loading weights:   9%|▉         | 37/399 [00:01<00:06, 53.11it/s]Loading weights:  11%|█         | 44/399 [00:01<00:06, 54.97it/s]Loading weights:  13%|█▎        | 51/399 [00:01<00:06, 52.73it/s]Loading weights:  15%|█▌        | 60/399 [00:01<00:05, 59.70it/s]Loading weights:  18%|█▊        | 70/399 [00:01<00:05, 65.67it/s]Loading weights:  19%|█▉        | 77/399 [00:01<00:04, 65.85it/s]Loading weights:  21%|██        | 84/399 [00:01<00:04, 64.15it/s]Loading weights:  23%|██▎       | 93/399 [00:02<00:04, 70.74it/s]Loading weights:  26%|██▌       | 104/399 [00:02<00:03, 75.19it/s]Loading weights:  29%|██▊       | 114/399 [00:02<00:03, 78.11it/s]Loading weights:  31%|███       | 122/399 [00:02<00:03, 74.46it/s]Loading weights:  33%|███▎      | 130/399 [00:02<00:03, 70.88it/s]Loading weights:  35%|███▍      | 138/399 [00:02<00:03, 68.35it/s]Loading weights:  37%|███▋      | 149/399 [00:02<00:03, 73.45it/s]Loading weights:  40%|███▉      | 159/399 [00:02<00:03, 77.49it/s]Loading weights:  42%|████▏     | 169/399 [00:03<00:02, 82.44it/s]Loading weights:  45%|████▍     | 178/399 [00:03<00:02, 83.63it/s]Loading weights:  47%|████▋     | 187/399 [00:03<00:02, 77.37it/s]Loading weights:  49%|████▉     | 195/399 [00:03<00:03, 66.61it/s]Loading weights:  51%|█████     | 203/399 [00:03<00:02, 68.40it/s]Loading weights:  54%|█████▎    | 214/399 [00:03<00:02, 74.75it/s]Loading weights:  56%|█████▋    | 225/399 [00:03<00:02, 78.20it/s]Loading weights:  59%|█████▉    | 235/399 [00:03<00:01, 82.69it/s]Loading weights:  61%|██████    | 244/399 [00:03<00:01, 83.84it/s]Loading weights:  63%|██████▎   | 253/399 [00:04<00:01, 81.89it/s]Loading weights:  66%|██████▌   | 262/399 [00:04<00:01, 78.82it/s]Loading weights:  68%|██████▊   | 270/399 [00:04<00:01, 69.20it/s]Loading weights:  70%|███████   | 280/399 [00:04<00:01, 76.72it/s]Loading weights:  73%|███████▎  | 290/399 [00:04<00:01, 82.73it/s]Loading weights:  75%|███████▌  | 301/399 [00:04<00:01, 83.81it/s]Loading weights:  78%|███████▊  | 312/399 [00:04<00:01, 82.95it/s]Loading weights:  80%|████████  | 321/399 [00:04<00:00, 83.74it/s]Loading weights:  83%|████████▎ | 330/399 [00:05<00:00, 81.39it/s]Loading weights:  85%|████████▍ | 339/399 [00:05<00:00, 82.83it/s]Loading weights:  87%|████████▋ | 348/399 [00:05<00:00, 80.79it/s]Loading weights:  89%|████████▉ | 357/399 [00:05<00:00, 83.24it/s]Loading weights:  92%|█████████▏| 368/399 [00:05<00:00, 86.82it/s]Loading weights:  95%|█████████▍| 379/399 [00:05<00:00, 88.77it/s]Loading weights:  98%|█████████▊| 390/399 [00:05<00:00, 86.54it/s]Loading weights: 100%|██████████| 399/399 [00:05<00:00, 68.39it/s]
+trainable params: 43,646,976 || all params: 8,234,382,336 || trainable%: 0.5301
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:04<00:43,  4.80s/it]                                              {'loss': '4.551', 'grad_norm': '18.5', 'learning_rate': '0.0001', 'entropy': '0.7009', 'mean_token_accuracy': '0.4301', 'num_tokens': '2092', 'epoch': '0.08'}
+ 10%|█         | 1/10 [00:04<00:43,  4.80s/it] 20%|██        | 2/10 [00:06<00:25,  3.18s/it]                                              {'loss': '2.94', 'grad_norm': '6.219', 'learning_rate': '0.0001', 'entropy': '0.8598', 'mean_token_accuracy': '0.5293', 'num_tokens': '4163', 'epoch': '0.16'}
+ 20%|██        | 2/10 [00:06<00:25,  3.18s/it] 30%|███       | 3/10 [00:08<00:18,  2.64s/it]                                              {'loss': '2.319', 'grad_norm': '4.969', 'learning_rate': '0.0001', 'entropy': '0.9934', 'mean_token_accuracy': '0.5509', 'num_tokens': '6522', 'epoch': '0.24'}
+ 30%|███       | 3/10 [00:08<00:18,  2.64s/it] 40%|████      | 4/10 [00:10<00:14,  2.45s/it]                                              {'loss': '2.328', 'grad_norm': '1.781', 'learning_rate': '0.0001', 'entropy': '1.324', 'mean_token_accuracy': '0.5556', 'num_tokens': '8747', 'epoch': '0.32'}
+ 40%|████      | 4/10 [00:10<00:14,  2.45s/it] 50%|█████     | 5/10 [00:13<00:11,  2.36s/it]                                              {'loss': '1.885', 'grad_norm': '1.336', 'learning_rate': '0.0001', 'entropy': '1.284', 'mean_token_accuracy': '0.6264', 'num_tokens': '1.082e+04', 'epoch': '0.4'}
+ 50%|█████     | 5/10 [00:13<00:11,  2.36s/it] 60%|██████    | 6/10 [00:15<00:09,  2.31s/it]                                              {'loss': '1.96', 'grad_norm': '1.016', 'learning_rate': '0.0001', 'entropy': '1.601', 'mean_token_accuracy': '0.6146', 'num_tokens': '1.326e+04', 'epoch': '0.48'}
+ 60%|██████    | 6/10 [00:15<00:09,  2.31s/it] 70%|███████   | 7/10 [00:17<00:06,  2.19s/it]                                              {'loss': '2.257', 'grad_norm': '1.234', 'learning_rate': '0.0001', 'entropy': '1.872', 'mean_token_accuracy': '0.5694', 'num_tokens': '1.548e+04', 'epoch': '0.56'}
+ 70%|███████   | 7/10 [00:17<00:06,  2.19s/it] 80%|████████  | 8/10 [00:19<00:04,  2.23s/it]                                              {'loss': '2.082', 'grad_norm': '1.055', 'learning_rate': '0.0001', 'entropy': '1.987', 'mean_token_accuracy': '0.5253', 'num_tokens': '1.773e+04', 'epoch': '0.64'}
+ 80%|████████  | 8/10 [00:19<00:04,  2.23s/it] 90%|█████████ | 9/10 [00:21<00:02,  2.25s/it]                                              {'loss': '1.878', 'grad_norm': '1.328', 'learning_rate': '0.0001', 'entropy': '1.906', 'mean_token_accuracy': '0.6369', 'num_tokens': '1.977e+04', 'epoch': '0.72'}
+ 90%|█████████ | 9/10 [00:21<00:02,  2.25s/it]100%|██████████| 10/10 [00:24<00:00,  2.24s/it]                                               {'loss': '2.291', 'grad_norm': '1.234', 'learning_rate': '0.0001', 'entropy': '2.417', 'mean_token_accuracy': '0.5181', 'num_tokens': '2.199e+04', 'epoch': '0.8'}
+100%|██████████| 10/10 [00:24<00:00,  2.24s/it]                                               {'train_runtime': '24.19', 'train_samples_per_second': '1.653', 'train_steps_per_second': '0.413', 'train_loss': '2.449', 'epoch': '0.8'}
+100%|██████████| 10/10 [00:24<00:00,  2.24s/it]100%|██████████| 10/10 [00:24<00:00,  2.42s/it]
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:42,  3.87it/s]Loading weights:   1%|          | 2/399 [00:00<01:48,  3.64it/s]Loading weights:   3%|▎         | 12/399 [00:00<00:14, 26.20it/s]Loading weights:   6%|▌         | 24/399 [00:00<00:07, 49.43it/s]Loading weights:   9%|▉         | 37/399 [00:00<00:05, 68.09it/s]Loading weights:  12%|█▏        | 49/399 [00:00<00:04, 79.38it/s]Loading weights:  15%|█▌        | 61/399 [00:01<00:03, 87.17it/s]Loading weights:  20%|█▉        | 78/399 [00:01<00:02, 108.11it/s]Loading weights:  23%|██▎       | 92/399 [00:01<00:02, 113.61it/s]Loading weights:  26%|██▋       | 105/399 [00:01<00:02, 108.88it/s]Loading weights:  30%|███       | 120/399 [00:01<00:02, 117.95it/s]Loading weights:  34%|███▍      | 136/399 [00:01<00:02, 122.33it/s]Loading weights:  37%|███▋      | 149/399 [00:01<00:02, 114.14it/s]Loading weights:  41%|████      | 164/399 [00:01<00:01, 123.49it/s]Loading weights:  45%|████▌     | 180/399 [00:02<00:01, 125.91it/s]Loading weights:  48%|████▊     | 193/399 [00:02<00:01, 115.04it/s]Loading weights:  52%|█████▏    | 208/399 [00:02<00:01, 123.62it/s]Loading weights:  56%|█████▌    | 224/399 [00:02<00:01, 126.35it/s]Loading weights:  59%|█████▉    | 237/399 [00:02<00:01, 115.96it/s]Loading weights:  63%|██████▎   | 252/399 [00:02<00:01, 123.18it/s]Loading weights:  66%|██████▋   | 265/399 [00:02<00:01, 124.99it/s]Loading weights:  70%|██████▉   | 279/399 [00:02<00:00, 125.25it/s]Loading weights:  73%|███████▎  | 292/399 [00:02<00:00, 116.71it/s]Loading weights:  77%|███████▋  | 309/399 [00:03<00:00, 128.46it/s]Loading weights:  81%|████████  | 323/399 [00:03<00:00, 126.54it/s]Loading weights:  84%|████████▍ | 336/399 [00:03<00:00, 115.12it/s]Loading weights:  88%|████████▊ | 351/399 [00:03<00:00, 123.88it/s]Loading weights:  92%|█████████▏| 367/399 [00:03<00:00, 126.46it/s]Loading weights:  95%|█████████▌| 380/399 [00:03<00:00, 116.58it/s]Loading weights:  99%|█████████▉| 395/399 [00:03<00:00, 122.93it/s]Loading weights: 100%|██████████| 399/399 [00:03<00:00, 105.11it/s]
+{
+  "status": "TRAIN_SMOKE_OK",
+  "time_utc": "2026-10-23T13:04:43.789059+00:00",
+  "model_dir": "/root/autodl-tmp/models/Qwen3-8B",
+  "dataset": {
+    "samples": 50,
+    "max_tokens": 833,
+    "supervised_tokens": 3395,
+    "tokenized_sha256": "582f7950be295189a28e2b6ea58cae9c8cfa4efac402a7a3b4c70007db81a6f9"
+  },
+  "output_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/outputs/smoke_20261023_210443",
+  "versions": {
+    "torch": "2.12.1+cu130",
+    "transformers": "5.20.2",
+    "trl": "1.16.0",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "datasets": "5.1.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "quality_evaluation_performed": false,
+  "training": {
+    "optimizer_steps": 10,
+    "gradient_checked_steps": 10,
+    "loss_history": [
+      {
+        "step": 1,
+        "loss": 4.551334381103516
+      },
+      {
+        "step": 2,
+        "loss": 2.9403507709503174
+      },
+      {
+        "step": 3,
+        "loss": 2.318956136703491
+      },
+      {
+        "step": 4,
+        "loss": 2.328324556350708
+      },
+      {
+        "step": 5,
+        "loss": 1.8853477239608765
+      },
+      {
+        "step": 6,
+        "loss": 1.9601603746414185
+      },
+      {
+        "step": 7,
+        "loss": 2.2568700313568115
+      },
+      {
+        "step": 8,
+        "loss": 2.0819990634918213
+      },
+      {
+        "step": 9,
+        "loss": 1.8779950141906738
+      },
+      {
+        "step": 10,
+        "loss": 2.291304111480713
+      }
+    ],
+    "final_training_loss": 2.4492642164230345,
+    "probe_parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+    "probe_max_absolute_update": 0.0009765625,
+    "trainable_parameters": 43646976,
+    "collator_checks": {
+      "checked_samples": 50,
+      "original_labels_preserved": true,
+      "padding_labels_masked": true
+    }
+  },
+  "training_peak_allocated_vram_gib": 9.27,
+  "training_peak_reserved_vram_gib": 10.799,
+  "training_and_first_load_seconds": 33.68,
+  "reload": {
+    "parameter_tensors": 504,
+    "saved_and_reloaded_weights_equal": true,
+    "adapter_sha256": "c75a2da1a2a35b51b0653a33a83a43584d23f8532a4d3bde069c853c1e3e2336"
+  },
+  "reload_generation": {
+    "sample_id": "travel-sft-pilot-005",
+    "answer": "地铁加步行能应付，因为杭州地铁适合连接机场、高铁站和主城区，主要活动范围在湖滨、商业区和西湖周边，地铁加步行通常就够用[1]。",
+    "note": "Training example; functionality check, not an independent evaluation."
+  },
+  "total_seconds": 42.56
+}
+TRAIN_SMOKE_OK

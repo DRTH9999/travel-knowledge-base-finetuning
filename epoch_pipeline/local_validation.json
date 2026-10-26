@@ -1,0 +1,358 @@
+{
+  "status": "LOCAL_EPOCH_CHECK_OK",
+  "checked_at_utc": "2026-10-24T02:45:18.798701+00:00",
+  "experiment": "revision_v2_epoch1_v1",
+  "plan": {
+    "num_train_epochs": 1,
+    "max_steps": -1,
+    "sample_count": 82,
+    "parent_count": 50,
+    "supplement_count": 32,
+    "batch_size": 1,
+    "gradient_accumulation": 4,
+    "micro_batches": 82,
+    "optimizer_steps": 21,
+    "last_update_micro_batches": 2,
+    "seed": 42,
+    "data_seed": 42,
+    "learning_rate": 0.0001,
+    "max_length": 2048,
+    "packing": false,
+    "dataloader_drop_last": false
+  },
+  "syntax_checks": "Python compile; both Bash scripts bash -n; LF newlines",
+  "data_unchanged": true,
+  "original_50_rows_raw_messages_tokens_unchanged": true,
+  "frozen_eval_checks": {
+    "validation": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "partially_answerable": 2,
+        "unanswerable": 3
+      }
+    },
+    "test": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "unanswerable": 3,
+        "partially_answerable": 2
+      }
+    }
+  },
+  "previous_runtime_dependency_hashes_verified": true,
+  "negative_checks": [
+    {
+      "case": "missing_last_sample",
+      "rejected": true,
+      "reason": "Incomplete training batch trace."
+    },
+    {
+      "case": "duplicate_sample",
+      "rejected": true,
+      "reason": "One-epoch coverage requires every row exactly once."
+    },
+    {
+      "case": "wrong_last_loss_normalizer",
+      "rejected": true,
+      "reason": "Loss normalizer does not count the actual accumulation group answer tokens."
+    },
+    {
+      "case": "missing_last_optimizer_update",
+      "rejected": true,
+      "reason": "Incomplete optimizer update trace."
+    },
+    {
+      "case": "wrong_token_fingerprint",
+      "rejected": true,
+      "reason": "Observed training data do not match frozen tokens/labels."
+    },
+    {
+      "case": "dependency_change",
+      "rejected": true,
+      "reason": "Existing project dependency changed or missing: revision_pipeline/__init__.py"
+    },
+    {
+      "case": "--epochs 2",
+      "rejected": true,
+      "reason": "Argument parser rejects unsupported epoch/step mode."
+    },
+    {
+      "case": "--max-steps 21",
+      "rejected": true,
+      "reason": "Argument parser rejects unsupported epoch/step mode."
+    }
+  ],
+  "actual_training_test": {
+    "model": "Random two-layer Qwen3, real Qwen3 tokenizer, NF4/BF16 CUDA",
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "5.20.2",
+      "trl": "1.16.0",
+      "peft": "0.21.2",
+      "accelerate": "1.15.0",
+      "datasets": "5.1.0",
+      "bitsandbytes": "0.50.2"
+    },
+    "status": "REVISION_EPOCH_TRAIN_OK",
+    "training": {
+      "optimizer_steps": 21,
+      "gradient_checked_steps": 21,
+      "actual_epochs": 1.0,
+      "final_training_loss": 11.931271280561175,
+      "loss_history": [
+        {
+          "step": 1,
+          "loss": 11.938176155090332
+        },
+        {
+          "step": 2,
+          "loss": 11.946913719177246
+        },
+        {
+          "step": 3,
+          "loss": 11.938224792480469
+        },
+        {
+          "step": 4,
+          "loss": 11.940095901489258
+        },
+        {
+          "step": 5,
+          "loss": 11.949152946472168
+        },
+        {
+          "step": 6,
+          "loss": 11.92850399017334
+        },
+        {
+          "step": 7,
+          "loss": 11.937283515930176
+        },
+        {
+          "step": 8,
+          "loss": 11.933450698852539
+        },
+        {
+          "step": 9,
+          "loss": 11.933492660522461
+        },
+        {
+          "step": 10,
+          "loss": 11.938149452209473
+        },
+        {
+          "step": 11,
+          "loss": 11.944674491882324
+        },
+        {
+          "step": 12,
+          "loss": 11.923080444335938
+        },
+        {
+          "step": 13,
+          "loss": 11.935428619384766
+        },
+        {
+          "step": 14,
+          "loss": 11.927270889282227
+        },
+        {
+          "step": 15,
+          "loss": 11.92536735534668
+        },
+        {
+          "step": 16,
+          "loss": 11.918146133422852
+        },
+        {
+          "step": 17,
+          "loss": 11.909082412719727
+        },
+        {
+          "step": 18,
+          "loss": 11.941490173339844
+        },
+        {
+          "step": 19,
+          "loss": 11.903244972229004
+        },
+        {
+          "step": 20,
+          "loss": 11.906708717346191
+        },
+        {
+          "step": 21,
+          "loss": 11.938758850097656
+        }
+      ],
+      "probe_parameter": "base_model.model.model.layers.0.self_attn.q_proj.lora_B.default.weight",
+      "probe_max_absolute_update": 0.002105712890625,
+      "trainable_parameters": 32768,
+      "collator_checks": {
+        "checked_samples": 82,
+        "original_labels_preserved": true,
+        "padding_labels_masked": true
+      },
+      "coverage": {
+        "status": "EPOCH_COVERAGE_OK",
+        "dataset_samples": 82,
+        "unique_trained_samples": 82,
+        "total_sample_presentations": 82,
+        "every_sample_exactly_once": true,
+        "parent_samples_trained": 50,
+        "supplement_samples_trained": 32,
+        "completed_micro_batches": 82,
+        "completed_optimizer_updates": 21,
+        "last_update": {
+          "optimizer_step": 21,
+          "micro_batches": 2,
+          "sample_ids": [
+            "travel-sft-revision-025",
+            "travel-sft-revision-016"
+          ],
+          "supervised_tokens": 168,
+          "loss_normalization": "actual_group_supervised_token_count",
+          "num_items_in_batch": 168,
+          "current_gradient_accumulation_steps": 2,
+          "gradient_checked_steps": 21,
+          "optimizer_step_skipped": false
+        },
+        "per_sample_counts": {
+          "travel-sft-pilot-001": 1,
+          "travel-sft-pilot-002": 1,
+          "travel-sft-pilot-003": 1,
+          "travel-sft-pilot-004": 1,
+          "travel-sft-pilot-005": 1,
+          "travel-sft-pilot-006": 1,
+          "travel-sft-pilot-007": 1,
+          "travel-sft-pilot-008": 1,
+          "travel-sft-pilot-009": 1,
+          "travel-sft-pilot-010": 1,
+          "travel-sft-pilot-011": 1,
+          "travel-sft-pilot-012": 1,
+          "travel-sft-pilot-013": 1,
+          "travel-sft-pilot-014": 1,
+          "travel-sft-pilot-015": 1,
+          "travel-sft-pilot-016": 1,
+          "travel-sft-pilot-017": 1,
+          "travel-sft-pilot-018": 1,
+          "travel-sft-pilot-019": 1,
+          "travel-sft-pilot-020": 1,
+          "travel-sft-pilot-021": 1,
+          "travel-sft-pilot-022": 1,
+          "travel-sft-pilot-023": 1,
+          "travel-sft-pilot-024": 1,
+          "travel-sft-pilot-025": 1,
+          "travel-sft-pilot-026": 1,
+          "travel-sft-pilot-027": 1,
+          "travel-sft-pilot-028": 1,
+          "travel-sft-pilot-029": 1,
+          "travel-sft-pilot-030": 1,
+          "travel-sft-pilot-031": 1,
+          "travel-sft-pilot-032": 1,
+          "travel-sft-pilot-033": 1,
+          "travel-sft-pilot-034": 1,
+          "travel-sft-pilot-035": 1,
+          "travel-sft-pilot-036": 1,
+          "travel-sft-pilot-037": 1,
+          "travel-sft-pilot-038": 1,
+          "travel-sft-pilot-039": 1,
+          "travel-sft-pilot-040": 1,
+          "travel-sft-pilot-041": 1,
+          "travel-sft-pilot-042": 1,
+          "travel-sft-pilot-043": 1,
+          "travel-sft-pilot-044": 1,
+          "travel-sft-pilot-045": 1,
+          "travel-sft-pilot-046": 1,
+          "travel-sft-pilot-047": 1,
+          "travel-sft-pilot-048": 1,
+          "travel-sft-pilot-049": 1,
+          "travel-sft-pilot-050": 1,
+          "travel-sft-revision-001": 1,
+          "travel-sft-revision-002": 1,
+          "travel-sft-revision-003": 1,
+          "travel-sft-revision-004": 1,
+          "travel-sft-revision-005": 1,
+          "travel-sft-revision-006": 1,
+          "travel-sft-revision-007": 1,
+          "travel-sft-revision-008": 1,
+          "travel-sft-revision-009": 1,
+          "travel-sft-revision-010": 1,
+          "travel-sft-revision-011": 1,
+          "travel-sft-revision-012": 1,
+          "travel-sft-revision-013": 1,
+          "travel-sft-revision-014": 1,
+          "travel-sft-revision-015": 1,
+          "travel-sft-revision-016": 1,
+          "travel-sft-revision-017": 1,
+          "travel-sft-revision-018": 1,
+          "travel-sft-revision-019": 1,
+          "travel-sft-revision-020": 1,
+          "travel-sft-revision-021": 1,
+          "travel-sft-revision-022": 1,
+          "travel-sft-revision-023": 1,
+          "travel-sft-revision-024": 1,
+          "travel-sft-revision-025": 1,
+          "travel-sft-revision-026": 1,
+          "travel-sft-revision-027": 1,
+          "travel-sft-revision-028": 1,
+          "travel-sft-revision-029": 1,
+          "travel-sft-revision-030": 1,
+          "travel-sft-revision-031": 1,
+          "travel-sft-revision-032": 1
+        },
+        "training_trace_sha256": "6b9c59faa6fb4abee98fd143688a0defc22bbf020f67794d60405af708bada41",
+        "optimizer_trace_sha256": "9020c2f29415ea1f298fc8f7c7df489098102c591ce285a2281ff47c3126e394",
+        "coverage_scope": "Recorded after each successful forward and backward; each group is matched to a non-skipped optimizer update. Not a quality score.",
+        "model_forward_calls": 82,
+        "metadata_excluded_from_model_input": true,
+        "actual_trainer_epoch": 1.0
+      }
+    },
+    "reload": {
+      "parameter_tensors": 28,
+      "saved_and_reloaded_weights_equal": true,
+      "adapter_sha256": "3d3c2ed8d36645614805bca3a633eb57df27ca3a25e4e2fc17c40cc5110cee7c"
+    },
+    "nonempty_reload_generation": true,
+    "raw_evidence_directory": ".cache\\epoch-integration-20261024-104109\\outputs\\epoch_test",
+    "epoch_report_sha256": "a088d9ff81b503db6135695e6d26ded83984a2b5a409860ceb43ad09eaf0da37",
+    "actual_model_forward_calls": 82,
+    "tracking_metadata_excluded_from_model": true,
+    "collator_checks_not_counted_as_training": true
+  },
+  "code_sha256": {
+    "training/train_revision_epoch.py": "a2953cb7d5f19909a149a390c375d585d22c5ef6368aa0d4c0e5f80036a0da0e",
+    "epoch_pipeline/training_core.py": "667040fa40b7f0ef5cd0fbd664c39b7bacdcc9b4003e442636a9f716c4b2baaa",
+    "epoch_pipeline/coverage.py": "b83de87e1febb9ec7dd33fcb73b9063cd46ca0dc8d3394a4b6e95f05ae5ec290",
+    "epoch_pipeline/preflight.py": "976c10f8c39e4c747742fc53e6aa803b1e1d2e1bdc7ddf0f6d803a6195b269f4",
+    "revision_pipeline/legacy_training_core.py": "d789a0f46a99ee81509fb819b5eae5437e9c6b1c7665706faac5d291e6bdebf6"
+  },
+  "cloud_epoch_8b_training_performed": false,
+  "independent_quality_evaluation_performed": false,
+  "limitations": [
+    "Tiny test verifies code, coverage and save/reload only; it does not establish 8B quality or resource use.",
+    "Cloud combined launcher has syntax checks; its 8B train/eval/tar flow remains for the user to run.",
+    "Existing validation has guided iteration and is not independent final evaluation."
+  ]
+}

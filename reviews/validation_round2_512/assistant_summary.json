@@ -1,0 +1,122 @@
+{
+  "status": "ROUND2_CONTROL_REVIEW_COMPLETE",
+  "reviewed_at_utc": "2026-10-24T01:39:52.403637+00:00",
+  "assessor": "Codex assistant; not independent human review or a blind assessment",
+  "human_signoff": false,
+  "score_scale": "5 dimensions each 0-2; total 0-10; evidence-review rubric, not accuracy",
+  "archive_sha256": "c7e7614eea1dcd0a0ea47d0ca496fcd893c3b9e9f9f66daea45eb96b587367a8",
+  "controls": {
+    "same_model_config_and_path": true,
+    "same_adapter": true,
+    "same_data": true,
+    "same_template": true,
+    "same_versions": true,
+    "paired_inputs_verified": 24,
+    "base_weight_identity_scope": "Same model directory and config hash; full base weight files were not independently rehashed.",
+    "generation_setting_change": "max_new_tokens: 256 -> 512"
+  },
+  "identical_adapter_answers": 24,
+  "identical_base_answers": 13,
+  "newly_reviewed_base_answers": 11,
+  "reused_after_exact_identity": 37,
+  "test_set_evaluated": false,
+  "rounds": {
+    "1": {
+      "base": {
+        "total_tokens": 4883,
+        "mean_tokens": 203.45833333333334,
+        "total_generation_seconds": 118.7988,
+        "mean_generation_seconds": 4.94995,
+        "output_limit_count": 11,
+        "output_limit_ids": [
+          "travel-eval-validation-001",
+          "travel-eval-validation-002",
+          "travel-eval-validation-005",
+          "travel-eval-validation-006",
+          "travel-eval-validation-007",
+          "travel-eval-validation-009",
+          "travel-eval-validation-010",
+          "travel-eval-validation-011",
+          "travel-eval-validation-012",
+          "travel-eval-validation-014",
+          "travel-eval-validation-017"
+        ],
+        "invalid_reference_sample_count": 1,
+        "missing_gold_reference_sample_count": 5,
+        "image_url_or_placeholder_count": 7
+      },
+      "adapter": {
+        "total_tokens": 950,
+        "mean_tokens": 39.583333333333336,
+        "total_generation_seconds": 41.5524,
+        "mean_generation_seconds": 1.73135,
+        "output_limit_count": 0,
+        "output_limit_ids": [],
+        "invalid_reference_sample_count": 0,
+        "missing_gold_reference_sample_count": 5,
+        "image_url_or_placeholder_count": 0
+      }
+    },
+    "2": {
+      "base": {
+        "total_tokens": 5973,
+        "mean_tokens": 248.875,
+        "total_generation_seconds": 174.0232,
+        "mean_generation_seconds": 7.250966666666667,
+        "output_limit_count": 1,
+        "output_limit_ids": [
+          "travel-eval-validation-017"
+        ],
+        "invalid_reference_sample_count": 2,
+        "missing_gold_reference_sample_count": 3,
+        "image_url_or_placeholder_count": 16
+      },
+      "adapter": {
+        "total_tokens": 950,
+        "mean_tokens": 39.583333333333336,
+        "total_generation_seconds": 45.6754,
+        "mean_generation_seconds": 1.9031416666666667,
+        "output_limit_count": 0,
+        "output_limit_ids": [],
+        "invalid_reference_sample_count": 0,
+        "missing_gold_reference_sample_count": 5,
+        "image_url_or_placeholder_count": 0
+      }
+    }
+  },
+  "models": {
+    "base": {
+      "mean_scores": {
+        "faithfulness": 0.625,
+        "completeness": 2.0,
+        "citation_support": 0.7916666666666666,
+        "answerability": 2.0,
+        "constraints_format": 0.625
+      },
+      "mean_total": 6.041666666666667
+    },
+    "adapter": {
+      "mean_scores": {
+        "faithfulness": 1.8333333333333333,
+        "completeness": 1.75,
+        "citation_support": 1.75,
+        "answerability": 1.875,
+        "constraints_format": 2.0
+      },
+      "mean_total": 9.208333333333334
+    }
+  },
+  "paired_rubric_total_comparison": {
+    "adapter_higher": 19,
+    "tied": 3,
+    "adapter_lower": 2
+  },
+  "limitations": [
+    "One held-out destination and shared source facts; no general tourism accuracy claim.",
+    "The same assistant authored the gold answers and reviewed outputs; independent human review remains pending.",
+    "Base case 017 still reached 512 tokens; it remains budget-conditional.",
+    "Elapsed times are single-run observations; GPU load/clocks were not controlled or measured.",
+    "Base model identity was checked by local path and config hash, not by rehashing all base weights.",
+    "Visible-evidence faithfulness was reviewed, not real-time external tourism factual truth."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "status": "FINAL_TEST_ARTIFACT_VERIFICATION_OK",
+  "checked_at_utc": "2026-10-24T03:59:18.211663+00:00",
+  "archive_sha256": "2e746f5bbee486593db5c7e0b1ee55c5e61d9e62c7370807e6f3672eeb6fd7f3",
+  "split": "test",
+  "samples_per_model": 24,
+  "candidate_adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "original_business_template_sha256": "f4f298d92c2d7d7dbb90ba3512cf95ccbd17cd537a5b0a3cd4a14748eb7a1ac0",
+  "candidate_identity_matches_pretest_proposal": true,
+  "prior_downloaded_adapter_bytes_rehashed": true,
+  "adapter_weights_in_this_archive": false,
+  "source_code_and_frozen_data_match": true,
+  "inference_input_hashes_recomputed": 48,
+  "paired_inputs_verified": 24,
+  "training_source_documents": 20,
+  "test_source_documents": 5,
+  "overlapping_source_documents": 0,
+  "exact_training_test_questions_overlap": 0,
+  "frozen_data_checks": {
+    "validation": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "partially_answerable": 2,
+        "unanswerable": 3
+      }
+    },
+    "test": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "unanswerable": 3,
+        "partially_answerable": 2
+      }
+    }
+  },
+  "generated_token_counts_source": "Reported counts and unchanged evaluator; output token IDs not included, no local 8B regeneration.",
+  "base_identity_scope": "Model path/config/template/package hashes and pinned local candidate; full base weights not rehashed.",
+  "original_human_reviews_pending": 48,
+  "test_results_used_for_retraining_or_prompt_revision_in_this_review": false,
+  "semantic_review_is_separate": true
+}

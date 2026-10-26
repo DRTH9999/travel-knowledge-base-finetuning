@@ -1,0 +1,145 @@
+{
+  "status": "LOCAL_PROMPT_CHECK_OK",
+  "checked_at_utc": "2026-10-24T03:21:56.235620+00:00",
+  "experiment": "fixed_epoch1_prompt_v2_validation",
+  "production_preflight": {
+    "status": "PROMPT_PREFLIGHT_OK",
+    "samples": 24,
+    "split": "validation",
+    "test_generation_enabled": false,
+    "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+    "unchanged_payloads_verified": 24,
+    "original_inputs_match_previous": 24,
+    "max_prompt_tokens": {
+      "original_prompt": 562,
+      "revised_prompt": 788
+    },
+    "max_new_tokens": 512,
+    "max_total_tokens": 2048,
+    "truncated_samples": 0,
+    "model_weights_loaded": false,
+    "runtime_package_identity_checked_before_generation": true
+  },
+  "unchanged_payloads_verified": 24,
+  "previous_input_token_hashes_reproduced": 24,
+  "gold_review_metadata_excluded": true,
+  "generic_rules_no_validation_answer_literals": true,
+  "production_adapter_unchanged": true,
+  "syntax_checks": "All Python compiled; Bash syntax and LF newline checks passed",
+  "negative_checks": [
+    {
+      "case": "debug_not_full_result",
+      "rejected": true,
+      "reason": "Incomplete debug results cannot stand in for the full validation comparison."
+    },
+    {
+      "case": "changed_question_evidence_payload",
+      "rejected": true,
+      "reason": "Question/evidence/history payload changed."
+    },
+    {
+      "case": "wrong_adapter",
+      "rejected": true,
+      "reason": "Wrong candidate adapter weights."
+    },
+    {
+      "case": "unversioned_rule_change",
+      "rejected": true,
+      "reason": "Frozen project dependency changed or missing: prompt_pipeline/rules_v2.txt"
+    },
+    {
+      "case": "--split test",
+      "rejected": true,
+      "reason": "Unsupported final-test or generation-budget override rejected before reading model."
+    },
+    {
+      "case": "--max-new-tokens 1024",
+      "rejected": true,
+      "reason": "Unsupported final-test or generation-budget override rejected before reading model."
+    },
+    {
+      "case": "actual_control_mismatch",
+      "rejected": true,
+      "reason": "Actual tiny NF4 generation mismatch stops before revised arm."
+    }
+  ],
+  "tiny_integration": {
+    "model": "Random two-layer Qwen3 with locally trained tiny LoRA, NF4/BF16; not 8B weights",
+    "scope": "Two validation questions, two prompt arms, 512 new tokens; incomplete functional test only",
+    "status": "PROMPT_COMPARISON_OK",
+    "samples_per_arm": 2,
+    "total_generations": 4,
+    "baseline_fixture": "Cache-only protocol binds tiny weights; only first two baseline responses are tiny controls, remaining rows unused.",
+    "original_control_reproduced": 2,
+    "output_integrity": {
+      "status": "PROMPT_RESULTS_CHECK_OK",
+      "samples_per_variant": 2,
+      "paired_payloads_verified": 2,
+      "original_control_reproduced": 2,
+      "complete_split": false,
+      "manual_review_status": "pending",
+      "semantic_quality_automatically_scored": false
+    },
+    "versions": {
+      "torch": "2.11.0+cu128",
+      "transformers": "5.20.2",
+      "peft": "0.21.2",
+      "bitsandbytes": "0.50.2"
+    },
+    "model_weights_updated": false,
+    "report_sha256": "2c6ded2a45a262c516356eccff3d1d4a5c4644b01799f84c9576f1c9415ca112",
+    "evidence_directory": ".cache\\prompt-integration-20261024-111718\\eval_outputs\\paired_tiny"
+  },
+  "runtime_source_sha256": {
+    "prompt_pipeline/evaluate_prompts.py": "65df09fd1eac916bf0263705f39dcb8a8e22cac3305a3bd39c71c4d6c70fc911",
+    "prompt_pipeline/protocol.py": "f34860db913af88eb3e418ca57a0c7f0bdf13be248bd4725f7aa23125463cf60",
+    "prompt_pipeline/review.py": "0039a0ff797db162b3a90cfe1bed0dac9cc63e097f8001c961e0c5899b024002",
+    "prompt_pipeline/validate_results.py": "1c3149eedfbcd7e0e04c2ad430bcb671d1ed17922e8fefa0aef260509b8f602a"
+  },
+  "frozen_eval_checks": {
+    "validation": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "partially_answerable": 2,
+        "unanswerable": 3
+      }
+    },
+    "test": {
+      "samples": 24,
+      "source_documents": 5,
+      "tasks": {
+        "single_evidence": 8,
+        "multi_evidence": 5,
+        "constrained_planning": 3,
+        "history_followup": 2,
+        "insufficient_evidence": 4,
+        "distractor_filtering": 2
+      },
+      "answerability": {
+        "answerable": 19,
+        "unanswerable": 3,
+        "partially_answerable": 2
+      }
+    }
+  },
+  "cloud_8b_prompt_comparison_performed": false,
+  "final_prompt_selected": false,
+  "test_predictions_generated": false,
+  "independent_quality_evaluation_performed": false,
+  "limitations": [
+    "Tiny tests validate execution and control enforcement only, not prompt quality.",
+    "Production preflight validates real input/token/model identities but does not load full 8B weights locally.",
+    "Combined cloud launcher has syntax checks; actual 8B paired generation/tar packaging remains for AutoDL.",
+    "Validation is repeatedly used for development; it is not independent final evaluation."
+  ]
+}

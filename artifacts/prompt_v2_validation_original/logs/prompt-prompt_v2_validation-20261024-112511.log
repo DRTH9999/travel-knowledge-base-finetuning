@@ -1,0 +1,163 @@
+{
+  "status": "PROMPT_PREFLIGHT_OK",
+  "samples": 24,
+  "split": "validation",
+  "test_generation_enabled": false,
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "unchanged_payloads_verified": 24,
+  "original_inputs_match_previous": 24,
+  "max_prompt_tokens": {
+    "original_prompt": 562,
+    "revised_prompt": 788
+  },
+  "max_new_tokens": 512,
+  "max_total_tokens": 2048,
+  "truncated_samples": 0,
+  "model_weights_loaded": false,
+  "runtime_package_identity_checked_before_generation": true
+}
+PROMPT_PREFLIGHT_OK
+Loading weights:   0%|          | 0/399 [00:00<?, ?it/s]Loading weights:   0%|          | 1/399 [00:00<01:37,  4.10it/s]Loading weights:   1%|          | 2/399 [00:00<01:29,  4.45it/s]Loading weights:   2%|▏         | 6/399 [00:00<00:28, 13.72it/s]Loading weights:   7%|▋         | 26/399 [00:00<00:05, 63.60it/s]Loading weights:  10%|▉         | 39/399 [00:00<00:04, 80.19it/s]Loading weights:  15%|█▍        | 59/399 [00:00<00:03, 112.10it/s]Loading weights:  18%|█▊        | 72/399 [00:00<00:02, 115.15it/s]Loading weights:  23%|██▎       | 92/399 [00:01<00:02, 138.35it/s]Loading weights:  27%|██▋       | 107/399 [00:01<00:02, 140.48it/s]Loading weights:  31%|███▏      | 125/399 [00:01<00:01, 150.20it/s]Loading weights:  35%|███▌      | 141/399 [00:01<00:01, 150.64it/s]Loading weights:  40%|███▉      | 158/399 [00:01<00:01, 154.15it/s]Loading weights:  44%|████▎     | 174/399 [00:01<00:01, 153.26it/s]Loading weights:  48%|████▊     | 191/399 [00:01<00:01, 158.01it/s]Loading weights:  52%|█████▏    | 207/399 [00:01<00:01, 157.66it/s]Loading weights:  56%|█████▋    | 225/399 [00:01<00:01, 157.46it/s]Loading weights:  62%|██████▏   | 246/399 [00:02<00:00, 165.52it/s]Loading weights:  66%|██████▌   | 263/399 [00:02<00:00, 163.25it/s]Loading weights:  70%|███████   | 280/399 [00:02<00:00, 148.03it/s]Loading weights:  74%|███████▍  | 296/399 [00:02<00:00, 146.32it/s]Loading weights:  78%|███████▊  | 312/399 [00:02<00:00, 146.47it/s]Loading weights:  82%|████████▏ | 327/399 [00:02<00:00, 140.87it/s]Loading weights:  86%|████████▋ | 345/399 [00:02<00:00, 150.17it/s]Loading weights:  90%|█████████ | 361/399 [00:02<00:00, 148.96it/s]Loading weights:  95%|█████████▍| 378/399 [00:02<00:00, 147.44it/s]Loading weights:  98%|█████████▊| 393/399 [00:03<00:00, 134.33it/s]Loading weights: 100%|██████████| 399/399 [00:03<00:00, 127.72it/s]
+[transformers] The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+original_prompt: 1/24 travel-eval-validation-001 (2.03s)
+original_prompt: 2/24 travel-eval-validation-002 (1.90s)
+original_prompt: 3/24 travel-eval-validation-003 (1.96s)
+original_prompt: 4/24 travel-eval-validation-004 (1.64s)
+original_prompt: 5/24 travel-eval-validation-005 (2.79s)
+original_prompt: 6/24 travel-eval-validation-006 (2.66s)
+original_prompt: 7/24 travel-eval-validation-007 (2.12s)
+original_prompt: 8/24 travel-eval-validation-008 (4.39s)
+original_prompt: 9/24 travel-eval-validation-009 (3.90s)
+original_prompt: 10/24 travel-eval-validation-010 (6.60s)
+original_prompt: 11/24 travel-eval-validation-011 (3.14s)
+original_prompt: 12/24 travel-eval-validation-012 (2.11s)
+original_prompt: 13/24 travel-eval-validation-013 (3.89s)
+original_prompt: 14/24 travel-eval-validation-014 (3.53s)
+original_prompt: 15/24 travel-eval-validation-015 (2.03s)
+original_prompt: 16/24 travel-eval-validation-016 (1.43s)
+original_prompt: 17/24 travel-eval-validation-017 (3.97s)
+original_prompt: 18/24 travel-eval-validation-018 (3.06s)
+original_prompt: 19/24 travel-eval-validation-019 (2.14s)
+original_prompt: 20/24 travel-eval-validation-020 (3.03s)
+original_prompt: 21/24 travel-eval-validation-021 (1.43s)
+original_prompt: 22/24 travel-eval-validation-022 (1.44s)
+original_prompt: 23/24 travel-eval-validation-023 (2.18s)
+original_prompt: 24/24 travel-eval-validation-024 (1.39s)
+PROMPT_CONTROL_REPRODUCED
+revised_prompt: 1/24 travel-eval-validation-001 (2.03s)
+revised_prompt: 2/24 travel-eval-validation-002 (1.83s)
+revised_prompt: 3/24 travel-eval-validation-003 (2.09s)
+revised_prompt: 4/24 travel-eval-validation-004 (1.68s)
+revised_prompt: 5/24 travel-eval-validation-005 (2.04s)
+revised_prompt: 6/24 travel-eval-validation-006 (2.55s)
+revised_prompt: 7/24 travel-eval-validation-007 (2.11s)
+revised_prompt: 8/24 travel-eval-validation-008 (1.42s)
+revised_prompt: 9/24 travel-eval-validation-009 (3.50s)
+revised_prompt: 10/24 travel-eval-validation-010 (4.87s)
+revised_prompt: 11/24 travel-eval-validation-011 (2.79s)
+revised_prompt: 12/24 travel-eval-validation-012 (1.88s)
+revised_prompt: 13/24 travel-eval-validation-013 (2.98s)
+revised_prompt: 14/24 travel-eval-validation-014 (2.92s)
+revised_prompt: 15/24 travel-eval-validation-015 (2.11s)
+revised_prompt: 16/24 travel-eval-validation-016 (1.46s)
+revised_prompt: 17/24 travel-eval-validation-017 (5.27s)
+revised_prompt: 18/24 travel-eval-validation-018 (4.88s)
+revised_prompt: 19/24 travel-eval-validation-019 (2.15s)
+revised_prompt: 20/24 travel-eval-validation-020 (2.91s)
+revised_prompt: 21/24 travel-eval-validation-021 (1.41s)
+revised_prompt: 22/24 travel-eval-validation-022 (0.99s)
+revised_prompt: 23/24 travel-eval-validation-023 (2.14s)
+revised_prompt: 24/24 travel-eval-validation-024 (0.81s)
+{
+  "status": "PROMPT_COMPARISON_OK",
+  "experiment": "fixed_epoch1_prompt_v2_validation",
+  "created_at_utc": "2026-10-24T03:25:18.159831+00:00",
+  "split": "validation",
+  "samples": 24,
+  "complete_split": true,
+  "model_dir": "/root/autodl-tmp/models/Qwen3-8B",
+  "adapter_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/outputs/revision_v2_epoch1/adapter",
+  "baseline_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/eval_outputs/revision_v2_epoch1_512",
+  "adapter_sha256": "916558566d8ed3bae3d479e7c181da433077fa35931dc916e66e5a4499e262f9",
+  "adapter_config_sha256": "c74b4e7e700dc2f82ec03299797cc2a39b60d214dbe8dd9d826c06a5a29758a1",
+  "model_config_sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+  "eval_manifest_sha256": "4777fe2af71d938f6fe28ef77f4f747d8c22e9473359b9b01959d08d47ba5649",
+  "eval_file_sha256": "85435625a22de07d91e72048941a1cd7c226605e42a21f58a649be57e1cb7898",
+  "chat_template_sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "enable_thinking": false,
+    "max_new_tokens": 512,
+    "warmup_new_tokens": 1,
+    "quantization": "NF4_double_quant_BF16_SDPA"
+  },
+  "versions": {
+    "torch": "2.12.1+cu130",
+    "transformers": "5.20.2",
+    "peft": "0.21.2",
+    "bitsandbytes": "0.50.2"
+  },
+  "template_sha256": {
+    "original_prompt": "f4f298d92c2d7d7dbb90ba3512cf95ccbd17cd537a5b0a3cd4a14748eb7a1ac0",
+    "revised_prompt": "5cad886194dcae67ff15b33fe259daecf488bbac4cca190778daabfeb2815514"
+  },
+  "experiment_manifest_sha256": "631bf4675cbbbf33cc33caae2687a7315527dc7a55646296975379a61856a95a",
+  "code_sha256": {
+    "prompt_pipeline/evaluate_prompts.py": "65df09fd1eac916bf0263705f39dcb8a8e22cac3305a3bd39c71c4d6c70fc911",
+    "prompt_pipeline/protocol.py": "f34860db913af88eb3e418ca57a0c7f0bdf13be248bd4725f7aa23125463cf60",
+    "prompt_pipeline/review.py": "0039a0ff797db162b3a90cfe1bed0dac9cc63e097f8001c961e0c5899b024002",
+    "evaluation/evaluate.py": "05c5917d2bf5c6599dcc4abebc1fdbc802f4680bca44ad79a22f7ae0b9a9ccf3",
+    "evaluation/common.py": "68705533edba2d32655a37e64c3d4101c255ad6168b7e7969b207d3046c28b2e"
+  },
+  "controls": {
+    "same_adapter_for_both_variants": true,
+    "same_question_evidence_history": true,
+    "unchanged_payloads": 24,
+    "generation_settings_unchanged": true,
+    "original_control_reproduced": true,
+    "mismatch_ids": [],
+    "original_control_identical_answers": 24
+  },
+  "tokenizer_eos_token_id": 151645,
+  "training_performed": false,
+  "test_predictions_generated": false,
+  "manual_review_status": "pending",
+  "semantic_correctness_auto_scored": false,
+  "variants": {
+    "original_prompt": {
+      "samples": 24,
+      "automatic_format_flag_sample_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 0,
+        "irrelevant_reference_ids": 0,
+        "missing_gold_reference_ids": 0,
+        "hit_output_limit": 0
+      },
+      "mean_output_tokens": 57.625,
+      "mean_generation_seconds": 2.6985875,
+      "peak_allocated_vram_gib": 5.981,
+      "warmup_seconds": 0.4197
+    },
+    "revised_prompt": {
+      "samples": 24,
+      "automatic_format_flag_sample_counts": {
+        "empty_answer": 0,
+        "contains_think_tags": 0,
+        "invalid_reference_ids": 0,
+        "irrelevant_reference_ids": 0,
+        "missing_gold_reference_ids": 1,
+        "hit_output_limit": 0
+      },
+      "mean_output_tokens": 50.625,
+      "mean_generation_seconds": 2.4510875,
+      "peak_allocated_vram_gib": 6.028,
+      "warmup_seconds": 0.1043
+    }
+  },
+  "output_dir": "/root/autodl-tmp/travel-finetune/sft_pilot_v1/eval_outputs/prompt_v2_validation",
+  "changed_answers": 20,
+  "interpretation": "Paired generation and control checks completed; no quality improvement or final prompt selection is automatically inferred."
+}
+PROMPT_COMPARISON_OK
